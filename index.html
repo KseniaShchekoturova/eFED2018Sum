@@ -2,15 +2,519 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <title>Five-day weather forecast</title>
-    <script type="text/javascript" src="mocks/FullWeatherDetailsMock.js"></script>
-    <script type="text/javascript" src="mocks/HistoricalReviewMock.js"></script>
-    <script type="text/javascript" src="mocks/WeekForecastMock.js"></script>
-  <script type="text/javascript" src="js/index.js"></script>
-  </head>
+    <title>Сайт погоды</title>
+    <style type="text/css">
+     body, html{height:98%;} 
+     
+     .navigation {height:5%; background:#ccc; padding: 5px; position:relative; font-size: 1.5vw;}
+     .pollutionsearch {height:5%; background: whitesmoke; padding: 5px; position:relative; font-size: 1.5vw;}
+     .cityinfo {height:30%; padding: 5px; position:relative; font-size: 2vw;}
+     .hours_temp {height:25%; padding: 5px; position:relative; font-size: 1.5vw;}
+     .hours_rain {height:25%; padding: 5px; position:relative; font-size: 1.5vw;}
+     .hours_wind {height:25%; padding: 5px; position:relative; font-size: 1.5vw;}
+     .days {height:25%; padding: 5px; position:relative; font-size: 1.5vw;}
+     .footer {height:2vw; background:#ccc; padding: 5px; position:relative; font-size: 1.5vw; text-align: center;}
+     
+     .height_center_4small{position:absolute; top:50%; margin-top:-0.75vw; width:100%;}
+     .height_center_4big{position:absolute; top:50%; margin-top:-6vw; width:100%;}
+     .height_center_4img{position:absolute; top:50%; margin-top:-3vw; width:100%;}
+     .columns > div{display:inline-block; position: relative;}
+     img{height:4vw;}
+     img[alt]{font-size:15px;}
+     .column_one{width:12%; text-align:center; height: 100%; position: relative;} 
+     .near_bar{width:30%; height: 100%;}
+     .bar{width:20%; background-color:dimgray; height: 100%;}
+     .bar1{width:20%; background-color:dimgray; height: 40%;  padding: 0px; width: 30%; border-color:blue; border-style:solid; border-width: 2px 0px 0px 0px;}
+     .bar2{width:20%; background-color:dimgray; height: 60%;  padding: 0px; width: 30%; border-color:blue; border-style:solid; border-width: 2px 0px 0px 0px;}
+     .bar3{width:20%; background-color:dimgray; height: 80%;  padding: 0px; width: 30%; border-color:blue; border-style:solid; border-width: 2px 0px 0px 0px;}
+     .days_1{height:30%; position: relative;}
+     .days_2{height:40%; position: relative;}
+     .img_big{height: 6vw;}
+     </style> 
+    </head>
   <body>
-    <h1>Пятидневный прогноз погоды</h1>
-    <div id="mainInfo">
+
+
+    <div class="navigation"> 
+      <div class="height_center_4small">
+        <button>Сегодня</button>   
+        <button>5 дней</button> 
+        <button>История погоды</button>
+      </div>      
+    </div>
+
+
+    <div class="pollutionsearch"> 
+      <div class="height_center_4small">
+        <div class="columns">
+          <div style="width:2%;"></div>
+          <div style="width:60%;">Загрязнение воздуха: 8.168...</div> 
+          <div style="width:35%;"><input type="search" style="width: 85%" placeholder="Поиск"></div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="cityinfo">
+      <div class="height_center_4big">
+        <div class="columns">
+          <div style="width:2%;"></div>
+          <div style="width:40%;">
+            <div>Ижевск, Россия</div> 
+            <div>среда</div> 
+            <div>облачно</div>
+            <img src="styles/assets_5 days_2018-06-14/Sunny Weather_5@3x.png" alt="Картинка текущей погоды"><span> 22&degC</span>
+          </div>
+          <div style="width:55%;">
+            <div>Вероятность осадков: 20%</div> 
+            <div>Влажность: 45%</div> 
+            <div>Ветер: 11 км/ч</div>
+            <br>
+            <div style="padding: 5px;">
+              <button id="button_temp">Температура</button>
+              <button id="button_rain">Вероятность осадков</button>
+              <button id="button_wind">Ветер</button></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="hours_temp" id="hours_temp" style="display:block;">
+      <div style="height:80%; border-color:dimgray; border-style:solid; border-width: 0px 0px 2px 0px;">
+        <div class="columns" style="height:100%;">
+          <div class="column_one">
+            <div style="height:20%">14</div>
+            <div style="height:80%">
+              <div class="columns" style="height: 100%;">
+                <div class="near_bar"></div>
+                <div class="bar"></div>
+                <div class="near_bar"></div>
+              </div>  
+            </div>          
+          </div>
+          <div class="column_one">
+            <div style="height:40%">14</div>
+            <div style="height:60%">
+              <div class="columns" style="height: 100%;">
+                <div class="near_bar"></div>
+                <div class="bar"></div>
+                <div class="near_bar"></div>
+              </div>  
+            </div>          
+          </div>
+          <div class="column_one">
+            <div style="height:50%">14</div>
+            <div style="height:50%">
+              <div class="columns" style="height: 100%;">
+                <div class="near_bar"></div>
+                <div class="bar"></div>
+                <div class="near_bar"></div>
+              </div>  
+            </div>          
+          </div>
+          <div class="column_one">
+            <div style="height:20%">14</div>
+            <div style="height:80%">
+              <div class="columns" style="height: 100%;">
+                <div class="near_bar"></div>
+                <div class="bar"></div>
+                <div class="near_bar"></div>
+              </div>  
+            </div>          
+          </div>
+          <div class="column_one">
+            <div style="height:20%">14</div>
+            <div style="height:80%">
+              <div class="columns" style="height: 100%;">
+                <div class="near_bar"></div>
+                <div class="bar"></div>
+                <div class="near_bar"></div>
+              </div>  
+            </div>          
+          </div>
+          <div class="column_one">
+            <div style="height:30%">14</div>
+            <div style="height:70%">
+              <div class="columns" style="height: 100%;">
+                <div class="near_bar"></div>
+                <div class="bar"></div>
+                <div class="near_bar"></div>
+              </div>  
+            </div>          
+          </div>
+          <div class="column_one">
+            <div style="height:20%">14</div>
+            <div style="height:80%">
+              <div class="columns" style="height: 100%;">
+                <div class="near_bar"></div>
+                <div class="bar"></div>
+                <div class="near_bar"></div>
+              </div>  
+            </div>          
+          </div>
+          <div class="column_one">
+            <div style="height:90%">14</div>
+            <div style="height:10%">
+              <div class="columns" style="height: 100%;">
+                <div class="near_bar"></div>
+                <div class="bar"></div>
+                <div class="near_bar"></div>
+              </div>  
+            </div>          
+          </div>
+        </div>
+      </div>
+      <div class="columns" style="height:20%;">
+        <div class="column_one">
+          <div class="height_center_4small">17:00</div>
+        </div>
+        <div class="column_one">
+          <div class="height_center_4small">20:00</div>
+        </div>
+        <div class="column_one">
+          <div class="height_center_4small">23:00</div>
+        </div>
+        <div class="column_one">
+          <div class="height_center_4small">2:00</div>
+        </div>
+        <div class="column_one">
+          <div class="height_center_4small">5:00</div>
+        </div>
+        <div class="column_one">
+          <div class="height_center_4small">8:00</div>
+        </div>
+        <div class="column_one">
+          <div class="height_center_4small">11:00</div>
+        </div>
+        <div class="column_one">
+          <div class="height_center_4small">14:00</div>
+        </div>
+      </div> 
+    </div>
+
+
+    <div class="hours_rain" id="hours_rain" style="display: none;">
+      <div style="height:80%;">
+        <div class="columns" style="height:100%;">
+          <div class="column_one">
+            <div style="height:20%;">14</div>
+            <div style="height:80%; padding: 0px;">
+              <div class="columns" style="height: 100%;">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+              </div>  
+            </div>          
+          </div>
+          <div class="column_one">
+            <div style="height:20%;">14</div>
+            <div style="height:80%; padding: 0px;">
+              <div class="columns" style="height: 100%;">
+                  <div class="bar1"></div>
+                  <div class="bar2"></div>
+                  <div class="bar3"></div>
+              </div>  
+            </div>          
+          </div>
+          <div class="column_one">
+            <div style="height:20%;">14</div>
+            <div style="height:80%; padding: 0px;">
+              <div class="columns" style="height: 100%;">
+                  <div class="bar1"></div>
+                  <div class="bar2"></div>
+                  <div class="bar3"></div>
+              </div>  
+            </div>          
+          </div>
+          <div class="column_one">
+            <div style="height:20%;">14</div>
+            <div style="height:80%; padding: 0px;">
+              <div class="columns" style="height: 100%;">
+                  <div class="bar1"></div>
+                  <div class="bar2"></div>
+                  <div class="bar3"></div>
+              </div>  
+            </div>          
+          </div>
+          <div class="column_one">
+            <div style="height:20%;">14</div>
+            <div style="height:80%; padding: 0px;">
+              <div class="columns" style="height: 100%;">
+                  <div class="bar1"></div>
+                  <div class="bar2"></div>
+                  <div class="bar3"></div>
+              </div>  
+            </div>          
+          </div>
+          <div class="column_one">
+            <div style="height:20%;">14</div>
+            <div style="height:80%; padding: 0px;">
+              <div class="columns" style="height: 100%;">
+                  <div class="bar1"></div>
+                  <div class="bar2"></div>
+                  <div class="bar3"></div>
+              </div>  
+            </div>          
+          </div>
+          <div class="column_one">
+            <div style="height:20%;">14</div>
+            <div style="height:80%; padding: 0px;">
+              <div class="columns" style="height: 100%;">
+                  <div class="bar1"></div>
+                  <div class="bar2"></div>
+                  <div class="bar3"></div>
+              </div>  
+            </div>          
+          </div>
+          <div class="column_one">
+            <div style="height:20%;">14</div>
+            <div style="height:80%; padding: 0px;">
+              <div class="columns" style="height: 100%;">
+                  <div class="bar1"></div>
+                  <div class="bar2"></div>
+                  <div class="bar3"></div>
+              </div>  
+            </div>          
+          </div>
+        </div>
+      </div>
+      <div class="columns" style="height:20%;">
+        <div class="column_one">
+          <div class="height_center_4small">17:00</div>
+        </div>
+        <div class="column_one">
+          <div class="height_center_4small">20:00</div>
+        </div>
+        <div class="column_one">
+          <div class="height_center_4small">23:00</div>
+        </div>
+        <div class="column_one">
+          <div class="height_center_4small">2:00</div>
+        </div>
+        <div class="column_one">
+          <div class="height_center_4small">5:00</div>
+        </div>
+        <div class="column_one">
+          <div class="height_center_4small">8:00</div>
+        </div>
+        <div class="column_one">
+          <div class="height_center_4small">11:00</div>
+        </div>
+        <div class="column_one">
+          <div class="height_center_4small">14:00</div>
+        </div>
+      </div>  
+    </div>
+
+
+    <div class="hours_wind" id="hours_wind" style="display: none;">
+        <div class="columns" style="height:100%;">
+          <div class="column_one" style="position: relative;">
+            <div class="days_1">
+              <div class="height_center_4small">1 м/с</div>
+            </div>
+            <div class="days_2">
+              <div class="height_center_4img"><img class="img_big" src="styles/long-left-arrow_icon-icons.com_70049.png" alt="Картинка погоды"></div>
+            </div>
+            <div class="days_1">
+              <div class="height_center_4small">17:00</div>
+            </div>
+          </div>
+          <div class="column_one" style="position: relative;">
+            <div class="days_1">
+              <div class="height_center_4small">2 м/с</div>
+            </div>
+            <div class="days_2">
+              <div class="height_center_4img"><img class="img_big" style="transform: rotate(30deg);" src="styles/long-left-arrow_icon-icons.com_70049.png" alt="Картинка погоды"></div>
+            </div>
+            <div class="days_1">
+              <div class="height_center_4small">20:00</div>
+            </div>
+          </div>
+          <div class="column_one" style="position: relative;">
+            <div class="days_1">
+              <div class="height_center_4small">3 м/с</div>
+            </div>
+            <div class="days_2">
+              <div class="height_center_4img"><img class="img_big" style="transform: rotate(60deg);" src="styles/long-left-arrow_icon-icons.com_70049.png" alt="Картинка погоды"></div>
+            </div>
+            <div class="days_1">
+              <div class="height_center_4small">23:00</div>
+            </div>
+          </div>
+          <div class="column_one" style="position: relative;">
+            <div class="days_1">
+              <div class="height_center_4small">4 м/с</div>
+            </div>
+            <div class="days_2">
+              <div class="height_center_4img"><img class="img_big" style="transform: rotate(90deg);" src="styles/long-left-arrow_icon-icons.com_70049.png" alt="Картинка погоды"></div>
+            </div>
+            <div class="days_1">
+              <div class="height_center_4small">2:00</div>
+            </div>
+          </div>
+          <div class="column_one" style="position: relative;">
+            <div class="days_1">
+              <div class="height_center_4small">5 м/с</div>
+            </div>
+            <div class="days_2">
+              <div class="height_center_4img"><img class="img_big" style="transform: rotate(-90deg);" src="styles/long-left-arrow_icon-icons.com_70049.png" alt="Картинка погоды"></div>
+            </div>
+            <div class="days_1">
+              <div class="height_center_4small">5:00</div>
+            </div>
+          </div>
+          <div class="column_one" style="position: relative;">
+            <div class="days_1">
+              <div class="height_center_4small">6 м/с</div>
+            </div>
+            <div class="days_2">
+              <div class="height_center_4img"><img class="img_big" style="transform: rotate(120deg);" src="styles/long-left-arrow_icon-icons.com_70049.png" alt="Картинка погоды"></div>
+            </div>
+            <div class="days_1">
+              <div class="height_center_4small">8:00</div>
+            </div>
+          </div>
+          <div class="column_one" style="position: relative;">
+            <div class="days_1">
+              <div class="height_center_4small">7 м/с</div>
+            </div>
+            <div class="days_2">
+              <div class="height_center_4img"><img class="img_big" style="transform: rotate(150deg);" src="styles/long-left-arrow_icon-icons.com_70049.png" alt="Картинка погоды"></div>
+            </div>
+            <div class="days_1">
+              <div class="height_center_4small">11:00</div>
+            </div>
+          </div>
+          <div class="column_one" style="position: relative;">
+            <div class="days_1">
+              <div class="height_center_4small">8 м/с</div>
+            </div>
+            <div class="days_2">
+              <div class="height_center_4img"><img class="img_big" style="transform: rotate(180deg);" src="styles/long-left-arrow_icon-icons.com_70049.png" alt="Картинка погоды"></div>
+            </div>
+            <div class="days_1">
+              <div class="height_center_4small">14:00</div>
+            </div>
+          </div>
+        </div> 
+      </div>
+
+
+    <div class="days">
+      <div class="columns" style="height:100%;">
+        <div class="column_one" style="position: relative;">
+          <div class="days_1">
+            <div class="height_center_4small">17:00</div>
+          </div>
+          <div class="days_2">
+            <div class="height_center_4img"><img class="img_big" src="styles/assets_5 days_2018-06-14/Sun.png" alt="Картинка погоды"></div>
+          </div>
+          <div class="days_1">
+            <div class="height_center_4small">22&deg 13&deg</div>
+          </div>
+        </div>
+        <div class="column_one" style="position: relative;">
+          <div class="days_1">
+            <div class="height_center_4small">20:00</div>
+          </div>
+          <div class="days_2">
+            <div class="height_center_4img"><img class="img_big" src="styles/assets_5 days_2018-06-14/Sun.png" alt="Картинка погоды"></div>
+          </div>
+          <div class="days_1">
+            <div class="height_center_4small">22&deg 13&deg</div>
+          </div>
+        </div>
+        <div class="column_one" style="position: relative;">
+          <div class="days_1">
+            <div class="height_center_4small">23:00</div>
+          </div>
+          <div class="days_2">
+            <div class="height_center_4img"><img class="img_big" src="styles/assets_5 days_2018-06-14/Sun.png" alt="Картинка погоды"></div>
+          </div>
+          <div class="days_1">
+            <div class="height_center_4small">22&deg 13&deg</div>
+          </div>
+        </div>
+        <div class="column_one" style="position: relative;">
+          <div class="days_1">
+            <div class="height_center_4small">2:00</div>
+          </div>
+          <div class="days_2">
+            <div class="height_center_4img"><img class="img_big" src="styles/assets_5 days_2018-06-14/Sun.png" alt="Картинка погоды"></div>
+          </div>
+          <div class="days_1">
+            <div class="height_center_4small">22&deg 13&deg</div>
+          </div>
+        </div>
+        <div class="column_one" style="position: relative;">
+          <div class="days_1">
+            <div class="height_center_4small">5:00</div>
+          </div>
+          <div class="days_2">
+            <div class="height_center_4img"><img class="img_big" src="styles/assets_5 days_2018-06-14/Sun.png" alt="Картинка погоды"></div>
+          </div>
+          <div class="days_1">
+            <div class="height_center_4small">8&deg 13&deg</div>
+          </div>
+        </div>
+        <div class="column_one" style="position: relative;">
+          <div class="days_1">
+            <div class="height_center_4small">11:00</div>
+          </div>
+          <div class="days_2">
+            <div class="height_center_4img"><img class="img_big" src="styles/assets_5 days_2018-06-14/Sun.png" alt="Картинка погоды"></div>
+          </div>
+          <div class="days_1">
+            <div class="height_center_4small">14&deg 13&deg</div>
+          </div>
+        </div>
+        <div class="column_one" style="position: relative;">
+          <div class="days_1">
+            <div class="height_center_4small">14:00</div>
+          </div>
+          <div class="days_2">
+            <div class="height_center_4img"><img class="img_big" src="styles/assets_5 days_2018-06-14/Sun.png" alt="Картинка погоды"></div>
+          </div>
+          <div class="days_1">
+            <div class="height_center_4small">22&deg 13&deg</div>
+          </div>
+        </div>
+        <div class="column_one" style="position: relative;">
+          <div class="days_1">
+            <div class="height_center_4small">17:00</div>
+          </div>
+          <div class="days_2">
+            <div class="height_center_4img"><img class="img_big" src="styles/assets_5 days_2018-06-14/Sun.png" alt="Картинка погоды"></div>
+          </div>
+          <div class="days_1">
+            <div class="height_center_4small">22&deg 13&deg</div>
+          </div>
+        </div>
+      </div> 
+    </div>
+
+
+    <div class="footer">2018 &copy Copyright</div>
+   
+   <script>
+        document.getElementById('button_temp').onclick = function() {
+          document.getElementById('hours_temp').style.display = 'block';
+          document.getElementById('hours_rain').style.display = 'none';
+          document.getElementById('hours_wind').style.display = 'none';
+        }
+        document.getElementById('button_rain').onclick = function() {
+          document.getElementById('hours_temp').style.display = 'none';
+          document.getElementById('hours_rain').style.display = 'block';
+          document.getElementById('hours_wind').style.display = 'none';
+        }
+        document.getElementById('button_wind').onclick = function() {
+          document.getElementById('hours_temp').style.display = 'none';
+          document.getElementById('hours_rain').style.display = 'none';
+          document.getElementById('hours_wind').style.display = 'block';
+        }
+      </script>
   </body>
   
 </html>
