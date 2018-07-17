@@ -1,106 +1,205 @@
+html, body{
+  height: 100%; 
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+/* ---------------------- крупные блоки ---------------------- */
+
+header{
+  height: 5%; 
+  background: #ccc; 
+  padding: 5px;
+}
+
+main{
+  height: 90%;
+}
+
+article{
+  height: 100%;
+}
+
+footer {
+  height: 5%;
+  background: #ccc;
+  padding: 5px;
+  text-align: center;
+}
+
+
+/* ---------------------- ширина ---------------------- */
+.width02{
+  width:2%;
+}
+
+.width35{
+  width:35%;
+}
+
+.width40{
+  width:40%;
+}
+
+.width55{
+  width:55%;
+}
+
+.width60{
+  width:60%;
+}
+
+.width85{
+  width:85%;
+}
+
+/* ---------------------- высота ---------------------- */
+.height10{
+  height: 10%;
+}
+
+.height20{
+  height: 20%;
+}
+
+.height30{
+  height: 30%;
+}
+
+.height40{
+  height: 40%;
+}
+
+.height50{
+  height: 50%;
+}
+
+.height60{
+  height: 60%;
+}
+
+.height70{
+  height: 70%;
+}
+
+.height80{
+  height: 80%;
+}
+
+.height90{
+  height: 90%;
+}
+
+/* ---------------------- мелкие блоки ---------------------- */
+.search{
+  height: 10%; 
+  padding: 5px;
+}
+
+.content{
+  height: 90%;
+}
 
 .cityinfo {
     height: 40%;
     padding: 5px;
   }
 
-  .hours_temp {
-    height: 30%;
-    padding: 5px;
-  }
+.hours{
+  height: 30%;
+  padding: 5px;
+}
 
-  .hours_rain {
-    height: 30%;
-    padding: 5px;
-  }
+ 
+.days {
+  height: 30%;
+  padding: 5px;
+}
 
-  .hours_wind {
-    height: 30%;
-    padding: 5px;
-  }
 
-  .days {
-    height: 30%;
-    padding: 5px;
-  }
+.columns{ 
+  height: 100%;
+}
 
-  footer {
-    height: 5%;
-    background: #ccc;
-    padding: 5px;
-    text-align: center;
-  }
+.columns>div {
+  display: inline-block;
+}
 
-  .columns>div {
-    display: inline-block;
-  }
+img {
+  height: 4vw;
+}
 
-  img {
-    height: 4vw;
-  }
+img[alt] {
+  font-size: 15px;
+}
 
-  img[alt] {
-    font-size: 15px;
-  }
+.column_one {
+  width: 12%;
+  text-align: center;
+  height: 100%;
+}
 
-  .column_one {
-    width: 12%;
-    text-align: center;
-    height: 100%;
-  }
+.near_bar {
+  width: 30%;
+  height: 100%;
+}
 
-  .near_bar {
-    width: 30%;
-    height: 100%;
-  }
+.bar {
+  width: 20%;
+  background-color: dimgray;
+  height: 100%;
+}
 
-  .bar {
-    width: 20%;
-    background-color: dimgray;
-    height: 100%;
-  }
+.bar1 {
+  width: 20%;
+  background-color: dimgray;
+  height: 40%;
+  padding: 0px;
+  width: 30%;
+  border-color: blue;
+  border-style: solid;
+  border-width: 2px 0px 0px 0px;
+}
 
-  .bar1 {
-    width: 20%;
-    background-color: dimgray;
-    height: 40%;
-    padding: 0px;
-    width: 30%;
-    border-color: blue;
-    border-style: solid;
-    border-width: 2px 0px 0px 0px;
-  }
+.bar2 {
+  width: 20%;
+  background-color: dimgray;
+  height: 60%;
+  padding: 0px;
+  width: 30%;
+  border-color: blue;
+  border-style: solid;
+  border-width: 2px 0px 0px 0px;
+}
 
-  .bar2 {
-    width: 20%;
-    background-color: dimgray;
-    height: 60%;
-    padding: 0px;
-    width: 30%;
-    border-color: blue;
-    border-style: solid;
-    border-width: 2px 0px 0px 0px;
-  }
+.bar3 {
+  width: 20%;
+  background-color: dimgray;
+  height: 80%;
+  padding: 0px;
+  width: 30%;
+  border-color: blue;
+  border-style: solid;
+  border-width: 2px 0px 0px 0px;
+}
 
-  .bar3 {
-    width: 20%;
-    background-color: dimgray;
-    height: 80%;
-    padding: 0px;
-    width: 30%;
-    border-color: blue;
-    border-style: solid;
-    border-width: 2px 0px 0px 0px;
-  }
+.days_1 {
+  height: 30%;
+}
 
-  .days_1 {
-    height: 30%;
-  }
+.days_2 {
+  height: 40%;
+}
 
-  .days_2 {
-    height: 40%;
-  }
+td {
+  border: 1px solid grey;
+}
 
-  td {
-    border: 1px solid grey;
-  }
+.rotate30{
+  transform: rotate(30deg);
+}
+
+.gray-border{
+  height:80%; border-color:dimgray; border-style:solid; border-width: 0px 0px 2px 0px;
+}
