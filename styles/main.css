@@ -1,205 +1,170 @@
-html, body{
-  height: 100%; 
-  width: 100%;
-  padding: 0;
-  margin: 0;
-}
-
 /* ---------------------- крупные блоки ---------------------- */
 
-header{
-  height: 5%; 
-  background: #ccc; 
+.choice-of-interval-of-days{
+  background-color: #ccc;
+  padding: 15px;
+}
+
+.pollution-and-search{
+  background: rgb(236, 236, 236);
+  padding: 15px;
+}
+
+.city, .info{
+  width: 40%;
   padding: 5px;
+  font-size: 150%;
 }
 
-main{
-  height: 90%;
+section{
+  margin: 0 0 40px 0;
 }
 
-article{
-  height: 100%;
-}
-
-footer {
-  height: 5%;
-  background: #ccc;
-  padding: 5px;
-  text-align: center;
+.temperature-values{
+  height: 80%; 
+  border-color:dimgray; 
+  border-style: solid; 
+  border-width: 0px 0px 2px 0px;
 }
 
 
-/* ---------------------- ширина ---------------------- */
-.width02{
-  width:2%;
+footer{
+  padding:15px;
+  background-color: #ccc;
+  text-align:center;
+  position: absolute;
+  bottom: 0px;
+  width: 100vw;
 }
 
-.width35{
-  width:35%;
+.one-hour-temperature{
+  position: relative; 
+  top: 150px;
 }
 
-.width40{
-  width:40%;
-}
+/* ---------------------- положение и его расширения ---------------------- */
 
-.width55{
-  width:55%;
-}
-
-.width60{
-  width:60%;
-}
-
-.width85{
-  width:85%;
-}
-
-/* ---------------------- высота ---------------------- */
-.height10{
-  height: 10%;
-}
-
-.height20{
-  height: 20%;
-}
-
-.height30{
-  height: 30%;
-}
-
-.height40{
-  height: 40%;
-}
-
-.height50{
-  height: 50%;
-}
-
-.height60{
-  height: 60%;
-}
-
-.height70{
-  height: 70%;
-}
-
-.height80{
-  height: 80%;
-}
-
-.height90{
-  height: 90%;
-}
-
-/* ---------------------- мелкие блоки ---------------------- */
-.search{
-  height: 10%; 
-  padding: 5px;
-}
-
-.content{
-  height: 90%;
-}
-
-.cityinfo {
-    height: 40%;
-    padding: 5px;
-  }
-
-.hours{
-  height: 30%;
-  padding: 5px;
-}
-
- 
-.days {
-  height: 30%;
-  padding: 5px;
-}
-
-
-.columns{ 
-  height: 100%;
-}
-
-.columns>div {
+.column{ 
   display: inline-block;
 }
 
-img {
-  height: 4vw;
+.column-ext-width12pc{
+  display: inline-block;
+  width: 12%;
+  text-align: center;
+}
+
+.column-ext-width3pc{
+  display: inline-block;
+  width: 3.5vw;
+  text-align: center;
+}
+
+/* ---------------------- полосы, бары ---------------------- */
+
+.temperature-bar16dg{
+  background-color: powderblue; 
+  width: 30px; 
+  height: 200px; 
+  margin: 0 auto;
+}
+
+.temperature-bar4dg{
+  background-color: powderblue; 
+  width: 30px; 
+  height: 50px; 
+  margin: 0 auto;
+}
+
+.precipitation-bar{
+  font-size: 12pt; 
+  background-color: powderblue; 
+  width: 33%; 
+  border-color:dimgray; 
+  border-style: solid; 
+  border-width: 2px 0px 0px 0px;
+}
+
+.height100px{
+  height: 100px;
+}
+
+.height150px{
+  height: 150px;
+}
+
+.height200px{
+  height: 200px;
+}
+
+/* ---------------------- цвета ---------------------- */
+
+.color1{
+  background-color: #ccc;
+}
+
+.color2{
+  background: rgb(236, 236, 236);
+}
+
+.bottom-gray-border{
+  height: 80%; 
+  border-color:dimgray; 
+  border-style: solid; 
+  border-width: 0px 0px 2px 0px;
+}
+
+
+/* ---------------------- отступы, высота, ширина, шрифты---------------------- */
+
+.padding5px{
+  padding: 5px;
+}
+
+.padding15px{
+  padding: 15px;
+}
+
+.width12pc{
+  width: 12%;
+}
+
+.width30pc{
+  width: 30%;
+}
+
+.width40pc{
+  width: 40%;
+}
+
+.width60pc{
+  width: 60%;
+}
+
+.fontsize150pc{
+  font-size: 150%;
 }
 
 img[alt] {
-  font-size: 15px;
+  font-size: 75%;
 }
 
-.column_one {
-  width: 12%;
-  text-align: center;
-  height: 100%;
+img {
+  width: 70px;
+  margin: 5px;
 }
 
-.near_bar {
-  width: 30%;
-  height: 100%;
-}
-
-.bar {
-  width: 20%;
-  background-color: dimgray;
-  height: 100%;
-}
-
-.bar1 {
-  width: 20%;
-  background-color: dimgray;
-  height: 40%;
-  padding: 0px;
-  width: 30%;
-  border-color: blue;
-  border-style: solid;
-  border-width: 2px 0px 0px 0px;
-}
-
-.bar2 {
-  width: 20%;
-  background-color: dimgray;
-  height: 60%;
-  padding: 0px;
-  width: 30%;
-  border-color: blue;
-  border-style: solid;
-  border-width: 2px 0px 0px 0px;
-}
-
-.bar3 {
-  width: 20%;
-  background-color: dimgray;
-  height: 80%;
-  padding: 0px;
-  width: 30%;
-  border-color: blue;
-  border-style: solid;
-  border-width: 2px 0px 0px 0px;
-}
-
-.days_1 {
-  height: 30%;
-}
-
-.days_2 {
-  height: 40%;
-}
-
-td {
-  border: 1px solid grey;
-}
+/* ---------------------- остальное ---------------------- */
 
 .rotate30{
   transform: rotate(30deg);
 }
 
-.gray-border{
-  height:80%; border-color:dimgray; border-style:solid; border-width: 0px 0px 2px 0px;
+.loupe:before{
+  content: url(/styles/loupe2.png);
 }
+
+.loupe-:before{ 
+  content: '§'; 
+}
+

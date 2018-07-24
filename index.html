@@ -10,447 +10,288 @@
 <body>
 
   <header>
-    <nav>
-      <button id="button_today">Сегодня</button>
-      <button id="button_5days">5 дней</button>
-      <button id="button_history">История погоды</button>
+    <nav class="choice-of-interval-of-days">
+      <div class="column">
+        <button id="button_today">Сегодня</button>
+      </div>
+      <div class="column">
+        <button id="button_5days">5 дней</button>
+      </div>
+      <div class="column">
+        <button id="button_history">История погоды</button>
+      </div>
     </nav>
+
+    <div class="pollution-and-search">
+      <div class="column width40pc">Загрязнение воздуха: 8.168...</div>
+      <div class="loupe column width40pc">
+        <input type="search" placeholder="Поиск"> </div>
+    </div>
   </header>
 
   <main>
-    <article>
 
-      <section class="search">
-        <div class="columns">
-          <div class="width02"></div>
-          <div class="width60">Загрязнение воздуха: 8.168...</div>
-          <div class="width35">
-            <input type="search" class="width85" placeholder="Поиск">
-          </div>
+    <section class="city-info">
+      <div class="column city">
+        Ижевск, Россия
+        <br> среда
+        <br> облачно
+        <br>
+        <img class="column" src="styles/assets_5 days_2018-06-14/Sunny Weather_5@3x.png" alt="Картинка текущей погоды">
+        <div class="column">
+          22&degC
         </div>
-      </section>
+      </div>
+      <div class="column info">
+        Вероятность осадков: 20%
+        <br> Влажность: 45%
+        <br> Ветер: 11 км/ч
+        <br>
+        <br>
+        <button id="button-temperature">Температура</button>
+        <button id="button-precipitation">Вероятность осадков</button>
+        <button id="button-wind">Ветер</button>
+      </div>
+    </section>
 
-      <section class="content">
-
-        <div class="cityinfo">
-          <div class="columns">
-            <div class="width02"></div>
-            <div class="width40">
-              <div>Ижевск, Россия</div>
-              <div>среда</div>
-              <div>облачно</div>
-              <img src="styles/assets_5 days_2018-06-14/Sunny Weather_5@3x.png" alt="Картинка текущей погоды">
-              <span> 22&degC</span>
-            </div>
-            <div class="width55">
-              <div>Вероятность осадков: 20%</div>
-              <div>Влажность: 45%</div>
-              <div>Ветер: 11 км/ч</div>
-              <br>
-              <button id="button_temp">Температура</button>
-              <button id="button_rain">Вероятность осадков</button>
-              <button id="button_wind">Ветер</button>
-            </div>
-          </div>
+    <section>
+      <div class="temperature-values" id="hours-temperature">
+        <div class="column-ext-width12pc">
+          16
+          <div class="temperature-bar16dg"></div>
         </div>
+        <div class="column-ext-width12pc one-hour-temperature">
+          4
+          <div class="temperature-bar4dg"></div>
+        </div>
+        <div class="column-ext-width12pc">
+          16
+          <div class="temperature-bar16dg"></div>
+        </div>
+        <div class="column-ext-width12pc one-hour-temperature">
+          4
+          <div class="temperature-bar4dg"></div>
+        </div>
+        <div class="column-ext-width12pc">
+          16
+          <div class="temperature-bar16dg"></div>
+        </div>
+        <div class="column-ext-width12pc one-hour-temperature">
+          4
+          <div class="temperature-bar4dg"></div>
+        </div>
+        <div class="column-ext-width12pc">
+          16
+          <div class="temperature-bar16dg"></div>
+        </div>
+        <div class="column-ext-width12pc one-hour-temperature">
+          4
+          <div class="temperature-bar4dg"></div>
+        </div>
+      </div>
 
-        <div class="hours" id="hours_temp">
-          <div class="gray-border">
-            <div class="columns">
-              <div class="column_one">
-                <div class="height20">14</div>
-                <div class="height80">
-                  <div class="columns">
-                    <div class="near_bar"></div>
-                    <div class="bar"></div>
-                    <div class="near_bar"></div>
-                  </div>
-                </div>
-              </div>
-              <div class="column_one">
-                <div class="height40">14</div>
-                <div class="height60">
-                  <div class="columns">
-                    <div class="near_bar"></div>
-                    <div class="bar"></div>
-                    <div class="near_bar"></div>
-                  </div>
-                </div>
-              </div>
-              <div class="column_one">
-                <div class="height50">14</div>
-                <div class="height50">
-                  <div class="columns">
-                    <div class="near_bar"></div>
-                    <div class="bar"></div>
-                    <div class="near_bar"></div>
-                  </div>
-                </div>
-              </div>
-              <div class="column_one">
-                <div class="height20">14</div>
-                <div class="height80">
-                  <div class="columns">
-                    <div class="near_bar"></div>
-                    <div class="bar"></div>
-                    <div class="near_bar"></div>
-                  </div>
-                </div>
-              </div>
-              <div class="column_one">
-                <div class="height20">14</div>
-                <div class="height80">
-                  <div class="columns">
-                    <div class="near_bar"></div>
-                    <div class="bar"></div>
-                    <div class="near_bar"></div>
-                  </div>
-                </div>
-              </div>
-              <div class="column_one">
-                <div class="height30">14</div>
-                <div class="height70">
-                  <div class="columns">
-                    <div class="near_bar"></div>
-                    <div class="bar"></div>
-                    <div class="near_bar"></div>
-                  </div>
-                </div>
-              </div>
-              <div class="column_one">
-                <div class="height20">14</div>
-                <div class="height80">
-                  <div class="columns">
-                    <div class="near_bar"></div>
-                    <div class="bar"></div>
-                    <div class="near_bar"></div>
-                  </div>
-                </div>
-              </div>
-              <div class="column_one">
-                <div class="height90">14</div>
-                <div class="height10">
-                  <div class="columns">
-                    <div class="near_bar"></div>
-                    <div class="bar"></div>
-                    <div class="near_bar"></div>
-                  </div>
-                </div>
-              </div>
-            </div>
+      <div class="precipitation-values" id="hours-precipitation" style="display: none;">
+
+        <div class="column-ext-width12pc">
+          <div style="font-size: 0;">
+            <div class="column precipitation-bar height100px"></div>
+            <div class="column precipitation-bar height150px"></div>
+            <div class="column precipitation-bar height200px"></div>
           </div>
-          <div class="columns" class="height20">
-            <div class="column_one">17:00</div>
-            <div class="column_one">20:00</div>
-            <div class="column_one">23:00</div>
-            <div class="column_one">2:00</div>
-            <div class="column_one">5:00</div>
-            <div class="column_one">8:00</div>
-            <div class="column_one">11:00</div>
-            <div class="column_one">14:00</div>
-          </div>
+          <div>17:00</div>
         </div>
 
-        <div class="hours" id="hours_rain" style="display: none;">
-          <div class="height80">
-            <div class="columns">
-              <div class="column_one">
-                <div class="height20">14</div>
-                <div class="height80">
-                  <div class="columns">
-                    <div class="bar1"></div>
-                    <div class="bar2"></div>
-                    <div class="bar3"></div>
-                  </div>
-                </div>
-              </div>
-              <div class="column_one">
-                <div class="height20">14</div>
-                <div class="height80">
-                  <div class="columns">
-                    <div class="bar1"></div>
-                    <div class="bar2"></div>
-                    <div class="bar3"></div>
-                  </div>
-                </div>
-              </div>
-              <div class="column_one">
-                <div class="height20">14</div>
-                <div class="height80">
-                  <div class="columns">
-                    <div class="bar1"></div>
-                    <div class="bar2"></div>
-                    <div class="bar3"></div>
-                  </div>
-                </div>
-              </div>
-              <div class="column_one">
-                <div class="height20">14</div>
-                <div class="height80">
-                  <div class="columns">
-                    <div class="bar1"></div>
-                    <div class="bar2"></div>
-                    <div class="bar3"></div>
-                  </div>
-                </div>
-              </div>
-              <div class="column_one">
-                <div class="height20">14</div>
-                <div class="height80">
-                  <div class="columns">
-                    <div class="bar1"></div>
-                    <div class="bar2"></div>
-                    <div class="bar3"></div>
-                  </div>
-                </div>
-              </div>
-              <div class="column_one">
-                <div class="height20">14</div>
-                <div class="height80">
-                  <div class="columns">
-                    <div class="bar1"></div>
-                    <div class="bar2"></div>
-                    <div class="bar3"></div>
-                  </div>
-                </div>
-              </div>
-              <div class="column_one">
-                <div class="height20">14</div>
-                <div class="height80">
-                  <div class="columns">
-                    <div class="bar1"></div>
-                    <div class="bar2"></div>
-                    <div class="bar3"></div>
-                  </div>
-                </div>
-              </div>
-              <div class="column_one">
-                <div class="height20">14</div>
-                <div class="height80">
-                  <div class="columns">
-                    <div class="bar1"></div>
-                    <div class="bar2"></div>
-                    <div class="bar3"></div>
-                  </div>
-                </div>
-              </div>
-            </div>
+        <div class="column-ext-width12pc">
+          <div style="font-size: 0;">
+            <div class="column precipitation-bar height100px"></div>
+            <div class="column precipitation-bar height150px"></div>
+            <div class="column precipitation-bar height200px"></div>
           </div>
-          <div class="height20">
-            <div class="columns" class="height20">
-              <div class="column_one">17:00</div>
-              <div class="column_one">20:00</div>
-              <div class="column_one">23:00</div>
-              <div class="column_one">2:00</div>
-              <div class="column_one">5:00</div>
-              <div class="column_one">8:00</div>
-              <div class="column_one">11:00</div>
-              <div class="column_one">14:00</div>
-            </div>
-          </div>
+          <div>20:00</div>
         </div>
 
-        <div class="hours" id="hours_wind" style="display: none;">
-          <div class="height80">
-            <div class="columns">
-              <div class="column_one">
-                <div class="height20">1 м/с</div>
-                <div class="height80">
-                  <img src="styles/long-left-arrow_icon-icons.com_70049.png" alt="Картинка погоды">
-                </div>
-              </div>
-              <div class="column_one">
-                <div class="height20">1 м/с</div>
-                <div class="height80">
-                  <img class="rotate30" src="styles/long-left-arrow_icon-icons.com_70049.png" alt="Картинка погоды">
-                </div>
-              </div>
-              <div class="column_one">
-                <div class="height20">1 м/с</div>
-                <div class="height80">
-                  <img class="rotate30" src="styles/long-left-arrow_icon-icons.com_70049.png" alt="Картинка погоды">
-                </div>
-              </div>
-              <div class="column_one">
-                <div class="height20">1 м/с</div>
-                <div class="height80">
-                  <img class="rotate30" src="styles/long-left-arrow_icon-icons.com_70049.png" alt="Картинка погоды">
-                </div>
-              </div>
-              <div class="column_one">
-                <div class="height20">1 м/с</div>
-                <div class="height80">
-                  <img class="rotate30" src="styles/long-left-arrow_icon-icons.com_70049.png" alt="Картинка погоды">
-                </div>
-              </div>
-              <div class="column_one">
-                <div class="height20">1 м/с</div>
-                <div class="height80">
-                  <img class="rotate30" src="styles/long-left-arrow_icon-icons.com_70049.png" alt="Картинка погоды">
-                </div>
-              </div>
-              <div class="column_one">
-                <div class="height20">1 м/с</div>
-                <div class="height80">
-                  <img class="rotate30" src="styles/long-left-arrow_icon-icons.com_70049.png" alt="Картинка погоды">
-                </div>
-              </div>
-              <div class="column_one">
-                <div class="height20">1 м/с</div>
-                <div class="height80">
-                  <img src="styles/long-left-arrow_icon-icons.com_70049.png" alt="Картинка погоды">
-                </div>
-              </div>
-            </div>
+        <div class="column-ext-width12pc">
+          <div style="font-size: 0;">
+            <div class="column precipitation-bar height100px"></div>
+            <div class="column precipitation-bar height150px"></div>
+            <div class="column precipitation-bar height200px"></div>
           </div>
-
-          <div class="height20">
-            <div class="columns" class="height20">
-              <div class="column_one">17:00</div>
-              <div class="column_one">20:00</div>
-              <div class="column_one">23:00</div>
-              <div class="column_one">2:00</div>
-              <div class="column_one">5:00</div>
-              <div class="column_one">8:00</div>
-              <div class="column_one">11:00</div>
-              <div class="column_one">14:00</div>
-            </div>
-          </div>
+          <div>23:00</div>
         </div>
 
-        <div class="days">
-          <div class="columns">
-            <div class="column_one">
-              <div class="days_1">
-                <div>ср</div>
-              </div>
-              <div class="days_2">
-                <div class="height_center_4img">
-                  <img src="styles/assets_5 days_2018-06-14/Sun.png" alt="Картинка погоды">
-                </div>
-              </div>
-              <div class="days_1">
-                <div>22&deg 13&deg</div>
-              </div>
-            </div>
-            <div class="column_one">
-              <div class="days_1">
-                <div>чт</div>
-              </div>
-              <div class="days_2">
-                <div class="height_center_4img">
-                  <img src="styles/assets_5 days_2018-06-14/Sun.png" alt="Картинка погоды">
-                </div>
-              </div>
-              <div class="days_1">
-                <div>22&deg 13&deg</div>
-              </div>
-            </div>
-            <div class="column_one">
-              <div class="days_1">
-                <div>пт</div>
-              </div>
-              <div class="days_2">
-                <div class="height_center_4img">
-                  <img src="styles/assets_5 days_2018-06-14/Sun.png" alt="Картинка погоды">
-                </div>
-              </div>
-              <div class="days_1">
-                <div>22&deg 13&deg</div>
-              </div>
-            </div>
-            <div class="column_one">
-              <div class="days_1">
-                <div>сб</div>
-              </div>
-              <div class="days_2">
-                <div class="height_center_4img">
-                  <img src="styles/assets_5 days_2018-06-14/Sun.png" alt="Картинка погоды">
-                </div>
-              </div>
-              <div class="days_1">
-                <div>22&deg 13&deg</div>
-              </div>
-            </div>
-            <div class="column_one">
-              <div class="days_1">
-                <div>вс</div>
-              </div>
-              <div class="days_2">
-                <div class="height_center_4img">
-                  <img src="styles/assets_5 days_2018-06-14/Sun.png" alt="Картинка погоды">
-                </div>
-              </div>
-              <div class="days_1">
-                <div>8&deg 13&deg</div>
-              </div>
-            </div>
-            <div class="column_one">
-              <div class="days_1">
-                <div>пн</div>
-              </div>
-              <div class="days_2">
-                <div class="height_center_4img">
-                  <img src="styles/assets_5 days_2018-06-14/Sun.png" alt="Картинка погоды">
-                </div>
-              </div>
-              <div class="days_1">
-                <div>14&deg 13&deg</div>
-              </div>
-            </div>
-            <div class="column_one">
-              <div class="days_1">
-                <div>вт</div>
-              </div>
-              <div class="days_2">
-                <div class="height_center_4img">
-                  <img src="styles/assets_5 days_2018-06-14/Sun.png" alt="Картинка погоды">
-                </div>
-              </div>
-              <div class="days_1">
-                <div>22&deg 13&deg</div>
-              </div>
-            </div>
-            <div class="column_one">
-              <div class="days_1">
-                <div>ср</div>
-              </div>
-              <div class="days_2">
-                <div class="height_center_4img">
-                  <img src="styles/assets_5 days_2018-06-14/Sun.png" alt="Картинка погоды">
-                </div>
-              </div>
-              <div class="days_1">
-                <div>22&deg 13&deg</div>
-              </div>
-            </div>
+        <div class="column-ext-width12pc">
+          <div style="font-size: 0;">
+            <div class="column precipitation-bar height100px"></div>
+            <div class="column precipitation-bar height150px"></div>
+            <div class="column precipitation-bar height200px"></div>
           </div>
+          <div>2:00</div>
         </div>
 
+        <div class="column-ext-width12pc">
+          <div style="font-size: 0;">
+            <div class="column precipitation-bar height100px"></div>
+            <div class="column precipitation-bar height150px"></div>
+            <div class="column precipitation-bar height200px"></div>
+          </div>
+          <div>5:00</div>
+        </div>
 
-      </section>
+        <div class="column-ext-width12pc">
+          <div style="font-size: 0;">
+            <div class="column precipitation-bar height100px"></div>
+            <div class="column precipitation-bar height150px"></div>
+            <div class="column precipitation-bar height200px"></div>
+          </div>
+          <div>8:00</div>
+        </div>
+
+        <div class="column-ext-width12pc">
+          <div style="font-size: 0;">
+            <div class="column precipitation-bar height100px"></div>
+            <div class="column precipitation-bar height150px"></div>
+            <div class="column precipitation-bar height200px"></div>
+          </div>
+          <div>11:00</div>
+        </div>
+
+        <div class="column-ext-width12pc">
+          <div style="font-size: 0;">
+            <div class="column precipitation-bar height100px"></div>
+            <div class="column precipitation-bar height150px"></div>
+            <div class="column precipitation-bar height200px"></div>
+          </div>
+          <div>14:00</div>
+        </div>
+
+      </div>
 
 
-    </article>
+
+      <div class="wind-values" id="hours-wind" style="display: none;">
+        <div class="column-ext-width12pc">
+          <div>5 м/с</div>
+          <img class="rotate30" src="styles/long-left-arrow_icon-icons.com_70049.png" alt="Картинка погоды">
+          <div>17:00</div>
+        </div>
+        <div class="column-ext-width12pc">
+          <div>5 м/с</div>
+          <img src="styles/long-left-arrow_icon-icons.com_70049.png" alt="Картинка погоды">
+          <div>20:00</div>
+        </div>
+        <div class="column-ext-width12pc">
+          <div>5 м/с</div>
+          <img class="rotate30" src="styles/long-left-arrow_icon-icons.com_70049.png"  alt="Картинка погоды">
+          <div>23:00</div>
+        </div>
+        <div class="column-ext-width12pc">
+          <div>5 м/с</div>
+          <img src="styles/long-left-arrow_icon-icons.com_70049.png" alt="Картинка погоды">
+          <div>2:00</div>
+        </div>
+        <div class="column-ext-width12pc">
+          <div>5 м/с</div>
+          <img class="rotate30" src="styles/long-left-arrow_icon-icons.com_70049.png"  alt="Картинка погоды">
+          <div>5:00</div>
+        </div>
+        <div class="column-ext-width12pc">
+          <div>5 м/с</div>
+          <img src="styles/long-left-arrow_icon-icons.com_70049.png" alt="Картинка погоды">
+          <div>8:00</div>
+        </div>
+        <div class="column-ext-width12pc">
+          <div>5 м/с</div>
+          <img class="rotate30" src="styles/long-left-arrow_icon-icons.com_70049.png"  alt="Картинка погоды">
+          <div>11:00</div>
+        </div>
+        <div class="column-ext-width12pc">
+          <div>5 м/с</div>
+          <img src="styles/long-left-arrow_icon-icons.com_70049.png" alt="Картинка погоды">
+          <div>14:00</div>
+        </div>
+      </div>
+
+
+
+      <div class="hours" id="hours">
+        <div class="column-ext-width12pc">17:00</div>
+        <div class="column-ext-width12pc">20:00</div>
+        <div class="column-ext-width12pc">23:00</div>
+        <div class="column-ext-width12pc">2:00</div>
+        <div class="column-ext-width12pc">5:00</div>
+        <div class="column-ext-width12pc">8:00</div>
+        <div class="column-ext-width12pc">11:00</div>
+        <div class="column-ext-width12pc">14:00</div>
+      </div>
+    </section>
+
+    <section class="days-temperature">
+      <div class="column-ext-width12pc">
+        <div>ср</div>
+        <img src="styles/assets_5 days_2018-06-14/Sun.png" alt="Картинка погоды">
+        <div>22&deg 13&deg</div>
+      </div>
+      <div class="column-ext-width12pc">
+        <div>чт</div>
+        <img src="styles/assets_5 days_2018-06-14/Sun.png" alt="Картинка погоды">
+        <div>22&deg 13&deg</div>
+      </div>
+      <div class="column-ext-width12pc">
+        <div>пт</div>
+        <img src="styles/assets_5 days_2018-06-14/Sun.png" alt="Картинка погоды">
+        <div>22&deg 13&deg</div>
+      </div>
+      <div class="column-ext-width12pc">
+        <div>сб</div>
+        <img src="styles/assets_5 days_2018-06-14/Sun.png" alt="Картинка погоды">
+        <div>22&deg 13&deg</div>
+      </div>
+      <div class="column-ext-width12pc">
+        <div>вс</div>
+        <img src="styles/assets_5 days_2018-06-14/Sun.png" alt="Картинка погоды">
+        <div>22&deg 13&deg</div>
+      </div>
+      <div class="column-ext-width12pc">
+        <div>пн</div>
+        <img src="styles/assets_5 days_2018-06-14/Sun.png" alt="Картинка погоды">
+        <div>22&deg 13&deg</div>
+      </div>
+      <div class="column-ext-width12pc">
+        <div>вт</div>
+        <img src="styles/assets_5 days_2018-06-14/Sun.png" alt="Картинка погоды">
+        <div>22&deg 13&deg</div>
+      </div>
+      <div class="column-ext-width12pc">
+        <div>ср</div>
+        <img src="styles/assets_5 days_2018-06-14/Sun.png" alt="Картинка погоды">
+        <div>22&deg 13&deg</div>
+      </div>
+    </section>
+
   </main>
 
-  <footer>2018 &copy Copyright</footer>
+  <footer>
+    2018 &copy Copyright
+  </footer>
 
   <script>
-    document.getElementById('button_temp').onclick = function () {
-      document.getElementById('hours_temp').style.display = 'block';
-      document.getElementById('hours_rain').style.display = 'none';
-      document.getElementById('hours_wind').style.display = 'none';
+    document.getElementById('button-temperature').onclick = function () {
+      document.getElementById('hours-temperature').style.display = 'block';
+      document.getElementById('hours').style.display = 'block';
+      document.getElementById('hours-precipitation').style.display = 'none';
+      document.getElementById('hours-wind').style.display = 'none';
     }
-    document.getElementById('button_rain').onclick = function () {
-      document.getElementById('hours_temp').style.display = 'none';
-      document.getElementById('hours_rain').style.display = 'block';
-      document.getElementById('hours_wind').style.display = 'none';
+    document.getElementById('button-precipitation').onclick = function () {
+      document.getElementById('hours-temperature').style.display = 'none';
+      document.getElementById('hours').style.display = 'none';
+      document.getElementById('hours-precipitation').style.display = 'block';
+      document.getElementById('hours-wind').style.display = 'none';
     }
-    document.getElementById('button_wind').onclick = function () {
-      document.getElementById('hours_temp').style.display = 'none';
-      document.getElementById('hours_rain').style.display = 'none';
-      document.getElementById('hours_wind').style.display = 'block';
+    document.getElementById('button-wind').onclick = function () {
+      document.getElementById('hours-temperature').style.display = 'none';
+      document.getElementById('hours').style.display = 'none';
+      document.getElementById('hours-precipitation').style.display = 'none';
+      document.getElementById('hours-wind').style.display = 'block';
     }
   </script>
 </body>
