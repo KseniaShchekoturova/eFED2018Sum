@@ -1,18 +1,21 @@
 /* ---------------------- крупные блоки ---------------------- */
 
-.choice-of-interval-of-days{
+.header__menu{
   background-color: #ccc;
   padding: 15px;
 }
 
-.pollution-and-search{
+.header__pollution-and-search{
   background: rgb(236, 236, 236);
+  padding: 15px;
+}
+
+.city-info{
   padding: 15px;
 }
 
 .city, .info{
   width: 40%;
-  padding: 5px;
   font-size: 150%;
 }
 
@@ -27,9 +30,8 @@ section{
   border-width: 0px 0px 2px 0px;
 }
 
-
 footer{
-  padding:15px;
+  padding:15px 0px;
   background-color: #ccc;
   text-align:center;
   position: absolute;
@@ -48,15 +50,14 @@ footer{
   display: inline-block;
 }
 
+.column__header__pollution-and-search{ 
+  display: inline-block;
+  width: 40%;
+}
+
 .column-ext-width12pc{
   display: inline-block;
   width: 12%;
-  text-align: center;
-}
-
-.column-ext-width3pc{
-  display: inline-block;
-  width: 3.5vw;
   text-align: center;
 }
 
@@ -97,9 +98,51 @@ footer{
   height: 200px;
 }
 
+/* ---------------------- остальное ---------------------- */
+
+.rotate30{
+  transform: rotate(30deg);
+}
+
+/* .loupe:before{
+  content: url('styles/loupe2.png');
+}
+
+.loupe-:before{ 
+  content: '§'; 
+} */
+
+.input-wrapper {
+  position: relative;
+}
+
+.input-wrapper:before {
+  content: '';
+  position: absolute;
+  display: block;
+  background: url('/styles/loupe.png');
+  width: 20px;
+  height: 20px;
+}
+
+.input {
+  padding-left: 23px;
+}
+
+img[alt] {
+  font-size: 75%;
+}
+
+img {
+  width: 70px;
+  margin: 5px;
+}
+
+
+
 /* ---------------------- цвета ---------------------- */
 
-.color1{
+/* .color1{
   background-color: #ccc;
 }
 
@@ -112,12 +155,12 @@ footer{
   border-color:dimgray; 
   border-style: solid; 
   border-width: 0px 0px 2px 0px;
-}
+} */
 
 
 /* ---------------------- отступы, высота, ширина, шрифты---------------------- */
 
-.padding5px{
+/* .padding5px{
   padding: 5px;
 }
 
@@ -143,28 +186,7 @@ footer{
 
 .fontsize150pc{
   font-size: 150%;
-}
+} */
 
-img[alt] {
-  font-size: 75%;
-}
 
-img {
-  width: 70px;
-  margin: 5px;
-}
-
-/* ---------------------- остальное ---------------------- */
-
-.rotate30{
-  transform: rotate(30deg);
-}
-
-.loupe:before{
-  content: url(/styles/loupe2.png);
-}
-
-.loupe-:before{ 
-  content: '§'; 
-}
 

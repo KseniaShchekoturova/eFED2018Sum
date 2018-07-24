@@ -10,7 +10,7 @@
 <body>
 
   <header>
-    <nav class="choice-of-interval-of-days">
+    <nav class="header__menu">
       <div class="column">
         <button id="button_today">Сегодня</button>
       </div>
@@ -22,10 +22,14 @@
       </div>
     </nav>
 
-    <div class="pollution-and-search">
-      <div class="column width40pc">Загрязнение воздуха: 8.168...</div>
-      <div class="loupe column width40pc">
-        <input type="search" placeholder="Поиск"> </div>
+    <div class="header__pollution-and-search">
+      <div class="column__header__pollution-and-search">Загрязнение воздуха: 8.168...</div>
+      <!-- <div class="loupe column width40pc">
+        <input type="search" placeholder="Поиск"> 
+      </div> -->
+      <div class="column__header__pollution-and-search input-wrapper">
+        <input type="text" class="input" placeholder="Поиск">
+      </div>
     </div>
   </header>
 
