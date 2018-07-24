@@ -1,5 +1,9 @@
 /* ---------------------- крупные блоки ---------------------- */
 
+body{
+  margin: 0%;
+}
+
 .header__menu{
   background-color: #ccc;
   padding: 15px;
@@ -39,29 +43,29 @@ footer{
   width: 100vw;
 }
 
-.one-hour-temperature{
-  position: relative; 
-  top: 150px;
-}
-
 /* ---------------------- положение и его расширения ---------------------- */
 
 .column{ 
   display: inline-block;
 }
 
-.column__header__pollution-and-search{ 
-  display: inline-block;
-  width: 40%;
-}
-
-.column-ext-width12pc{
+.days-or-hours-column{
   display: inline-block;
   width: 12%;
   text-align: center;
 }
 
+/* .hour__bar-temperature,weekday__temperature-and-weather,{
+  width: 12%;
+  text-align: center; 
+} */
+
 /* ---------------------- полосы, бары ---------------------- */
+
+.one-hour-temperature4dg{
+  position: relative; 
+  top: 150px;
+}
 
 .temperature-bar16dg{
   background-color: powderblue; 
@@ -119,10 +123,12 @@ footer{
 .input-wrapper:before {
   content: '';
   position: absolute;
+  top: 2px;
+  left: 2px;
   display: block;
-  background: url('/styles/loupe.png');
-  width: 20px;
-  height: 20px;
+  background: url('Zoom.ico');
+  width: 18px;
+  height: 18px;
 }
 
 .input {
