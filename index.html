@@ -10,33 +10,24 @@
 <body>
 
   <header>
-    <nav class="header__menu">
-      <div class="column">
-        <button id="button_today">Сегодня</button>
-      </div>
-      <div class="column">
-        <button id="button_5days">5 дней</button>
-      </div>
-      <div class="column">
-        <button id="button_history">История погоды</button>
-      </div>
+    <nav class="header__navigation">
+      <button id="button_today">Сегодня</button>
+      <button id="button_5days">5 дней</button>
+      <button id="button_history">История погоды</button>
     </nav>
 
-    <div class="header__pollution-and-search">
-      <div class="column" style="width: 70%;">Загрязнение воздуха: 8.168...</div>
-      <!-- <div class="loupe column width40pc">
-        <input type="search" placeholder="Поиск"> 
-      </div> -->
-      <div class="column input-wrapper">
-        <input type="text" class="input" placeholder="Поиск">
+    <div class="header__pollution-and-search header-pollution-and-search">
+      <div class="column header-pollution-and-search__pollution">Загрязнение воздуха: 8.168...</div>
+      <div class="column header-pollution-and-search__input-wrapper">
+        <input type="text" class="header-pollution-and-search__input" placeholder="Поиск">
       </div>
     </div>
   </header>
 
   <main>
 
-    <section class="city-info">
-      <div class="column city">
+    <section class="main__current-weather main-current-weather">
+      <div class="column main-current-weather__common-indicators">
         Ижевск, Россия
         <br> среда
         <br> облачно
@@ -46,226 +37,226 @@
           22&degC
         </div>
       </div>
-      <div class="column info">
+      <div class="column main-current-weather__specific-indicators">
         Вероятность осадков: 20%
         <br> Влажность: 45%
         <br> Ветер: 11 км/ч
         <br>
         <br>
-        <button id="button-temperature">Температура</button>
-        <button id="button-precipitation">Вероятность осадков</button>
-        <button id="button-wind">Ветер</button>
+        <nav>
+          <button id="button-temperature">Температура</button>
+          <button id="button-precipitation">Вероятность осадков</button>
+          <button id="button-wind">Ветер</button>
+        </nav>
       </div>
     </section>
 
-    <section>
-      <div class="temperature-values" id="hours-temperature">
-        <div class="days-or-hours-column">
+    <section class="main__hours-weather main-hours-weather">
+      
+      <div class="main-hours-weather__temperature-values" id="hours-temperature">
+        <div class="equal-column">
           16
           <div class="temperature-bar16dg"></div>
         </div>
-        <div class="days-or-hours-column one-hour-temperature4dg">
+        <div class="equal-column one-hour-temperature4dg">
           4
           <div class="temperature-bar4dg"></div>
         </div>
-        <div class="days-or-hours-column">
+        <div class="equal-column">
           16
           <div class="temperature-bar16dg"></div>
         </div>
-        <div class="days-or-hours-column one-hour-temperature4dg">
+        <div class="equal-column one-hour-temperature4dg">
           4
           <div class="temperature-bar4dg"></div>
         </div>
-        <div class="days-or-hours-column">
+        <div class="equal-column">
           16
           <div class="temperature-bar16dg"></div>
         </div>
-        <div class="days-or-hours-column one-hour-temperature4dg">
+        <div class="equal-column one-hour-temperature4dg">
           4
           <div class="temperature-bar4dg"></div>
         </div>
-        <div class="days-or-hours-column">
+        <div class="equal-column">
           16
           <div class="temperature-bar16dg"></div>
         </div>
-        <div class="days-or-hours-column one-hour-temperature4dg">
+        <div class="equal-column one-hour-temperature4dg">
           4
           <div class="temperature-bar4dg"></div>
         </div>
       </div>
 
-      <div class="precipitation-values" id="hours-precipitation" style="display: none;">
+      <div class="main-hours-weather__precipitation-values" id="hours-precipitation" style="display: none;">
 
-        <div class="days-or-hours-column">
+        <div class="equal-column">
           <div style="font-size: 0;">
-            <div class="column precipitation-bar height100px"></div>
-            <div class="column precipitation-bar height150px"></div>
-            <div class="column precipitation-bar height200px"></div>
+            <div class="column precipitation-bar precipitation-bar-low"></div>
+            <div class="column precipitation-bar precipitation-bar-middle"></div>
+            <div class="column precipitation-bar precipitation-bar-high"></div>
           </div>
           <div>17:00</div>
         </div>
 
-        <div class="days-or-hours-column">
+        <div class="equal-column">
           <div style="font-size: 0;">
-            <div class="column precipitation-bar height100px"></div>
-            <div class="column precipitation-bar height150px"></div>
-            <div class="column precipitation-bar height200px"></div>
+            <div class="column precipitation-bar precipitation-bar-low"></div>
+            <div class="column precipitation-bar precipitation-bar-middle"></div>
+            <div class="column precipitation-bar precipitation-bar-high"></div>
           </div>
           <div>20:00</div>
         </div>
 
-        <div class="days-or-hours-column">
+        <div class="equal-column">
           <div style="font-size: 0;">
-            <div class="column precipitation-bar height100px"></div>
-            <div class="column precipitation-bar height150px"></div>
-            <div class="column precipitation-bar height200px"></div>
+            <div class="column precipitation-bar precipitation-bar-low"></div>
+            <div class="column precipitation-bar precipitation-bar-middle"></div>
+            <div class="column precipitation-bar precipitation-bar-high"></div>
           </div>
           <div>23:00</div>
         </div>
 
-        <div class="days-or-hours-column">
+        <div class="equal-column">
           <div style="font-size: 0;">
-            <div class="column precipitation-bar height100px"></div>
-            <div class="column precipitation-bar height150px"></div>
-            <div class="column precipitation-bar height200px"></div>
+            <div class="column precipitation-bar precipitation-bar-low"></div>
+            <div class="column precipitation-bar precipitation-bar-middle"></div>
+            <div class="column precipitation-bar precipitation-bar-high"></div>
           </div>
           <div>2:00</div>
         </div>
 
-        <div class="days-or-hours-column">
+        <div class="equal-column">
           <div style="font-size: 0;">
-            <div class="column precipitation-bar height100px"></div>
-            <div class="column precipitation-bar height150px"></div>
-            <div class="column precipitation-bar height200px"></div>
+            <div class="column precipitation-bar precipitation-bar-low"></div>
+            <div class="column precipitation-bar precipitation-bar-middle"></div>
+            <div class="column precipitation-bar precipitation-bar-high"></div>
           </div>
           <div>5:00</div>
         </div>
 
-        <div class="days-or-hours-column">
+        <div class="equal-column">
           <div style="font-size: 0;">
-            <div class="column precipitation-bar height100px"></div>
-            <div class="column precipitation-bar height150px"></div>
-            <div class="column precipitation-bar height200px"></div>
+            <div class="column precipitation-bar precipitation-bar-low"></div>
+            <div class="column precipitation-bar precipitation-bar-middle"></div>
+            <div class="column precipitation-bar precipitation-bar-high"></div>
           </div>
           <div>8:00</div>
         </div>
 
-        <div class="days-or-hours-column">
+        <div class="equal-column">
           <div style="font-size: 0;">
-            <div class="column precipitation-bar height100px"></div>
-            <div class="column precipitation-bar height150px"></div>
-            <div class="column precipitation-bar height200px"></div>
+            <div class="column precipitation-bar precipitation-bar-low"></div>
+            <div class="column precipitation-bar precipitation-bar-middle"></div>
+            <div class="column precipitation-bar precipitation-bar-high"></div>
           </div>
           <div>11:00</div>
         </div>
 
-        <div class="days-or-hours-column">
+        <div class="equal-column">
           <div style="font-size: 0;">
-            <div class="column precipitation-bar height100px"></div>
-            <div class="column precipitation-bar height150px"></div>
-            <div class="column precipitation-bar height200px"></div>
+            <div class="column precipitation-bar precipitation-bar-low"></div>
+            <div class="column precipitation-bar precipitation-bar-middle"></div>
+            <div class="column precipitation-bar precipitation-bar-high"></div>
           </div>
           <div>14:00</div>
         </div>
 
       </div>
 
-
-
-      <div class="wind-values" id="hours-wind" style="display: none;">
-        <div class="days-or-hours-column">
+      <div class="main-hours-weather__wind-values" id="hours-wind" style="display: none;">
+        <div class="equal-column">
           <div>5 м/с</div>
           <img class="rotate30" src="styles/long-left-arrow_icon-icons.com_70049.png" alt="Картинка погоды">
           <div>17:00</div>
         </div>
-        <div class="days-or-hours-column">
+        <div class="equal-column">
           <div>5 м/с</div>
           <img src="styles/long-left-arrow_icon-icons.com_70049.png" alt="Картинка погоды">
           <div>20:00</div>
         </div>
-        <div class="days-or-hours-column">
+        <div class="equal-column">
           <div>5 м/с</div>
-          <img class="rotate30" src="styles/long-left-arrow_icon-icons.com_70049.png"  alt="Картинка погоды">
+          <img class="rotate30" src="styles/long-left-arrow_icon-icons.com_70049.png" alt="Картинка погоды">
           <div>23:00</div>
         </div>
-        <div class="days-or-hours-column">
+        <div class="equal-column">
           <div>5 м/с</div>
           <img src="styles/long-left-arrow_icon-icons.com_70049.png" alt="Картинка погоды">
           <div>2:00</div>
         </div>
-        <div class="days-or-hours-column">
+        <div class="equal-column">
           <div>5 м/с</div>
-          <img class="rotate30" src="styles/long-left-arrow_icon-icons.com_70049.png"  alt="Картинка погоды">
+          <img class="rotate30" src="styles/long-left-arrow_icon-icons.com_70049.png" alt="Картинка погоды">
           <div>5:00</div>
         </div>
-        <div class="days-or-hours-column">
+        <div class="equal-column">
           <div>5 м/с</div>
           <img src="styles/long-left-arrow_icon-icons.com_70049.png" alt="Картинка погоды">
           <div>8:00</div>
         </div>
-        <div class="days-or-hours-column">
+        <div class="equal-column">
           <div>5 м/с</div>
-          <img class="rotate30" src="styles/long-left-arrow_icon-icons.com_70049.png"  alt="Картинка погоды">
+          <img class="rotate30" src="styles/long-left-arrow_icon-icons.com_70049.png" alt="Картинка погоды">
           <div>11:00</div>
         </div>
-        <div class="days-or-hours-column">
+        <div class="equal-column">
           <div>5 м/с</div>
           <img src="styles/long-left-arrow_icon-icons.com_70049.png" alt="Картинка погоды">
           <div>14:00</div>
         </div>
       </div>
 
-
-
-      <div class="hours" id="hours">
-        <div class="days-or-hours-column">17:00</div>
-        <div class="days-or-hours-column">20:00</div>
-        <div class="days-or-hours-column">23:00</div>
-        <div class="days-or-hours-column">2:00</div>
-        <div class="days-or-hours-column">5:00</div>
-        <div class="days-or-hours-column">8:00</div>
-        <div class="days-or-hours-column">11:00</div>
-        <div class="days-or-hours-column">14:00</div>
+      <div class="main-hours-weather__hours" id="hours">
+        <div class="equal-column">17:00</div>
+        <div class="equal-column">20:00</div>
+        <div class="equal-column">23:00</div>
+        <div class="equal-column">2:00</div>
+        <div class="equal-column">5:00</div>
+        <div class="equal-column">8:00</div>
+        <div class="equal-column">11:00</div>
+        <div class="equal-column">14:00</div>
       </div>
+
     </section>
 
-    <section class="days-temperature">
-      <div class="days-or-hours-column">
+    <section class="main__days-weather">
+      <div class="equal-column">
         <div>ср</div>
         <img src="styles/assets_5 days_2018-06-14/Sun.png" alt="Картинка погоды">
         <div>22&deg 13&deg</div>
       </div>
-      <div class="days-or-hours-column">
+      <div class="equal-column">
         <div>чт</div>
         <img src="styles/assets_5 days_2018-06-14/Sun.png" alt="Картинка погоды">
         <div>22&deg 13&deg</div>
       </div>
-      <div class="days-or-hours-column">
+      <div class="equal-column">
         <div>пт</div>
         <img src="styles/assets_5 days_2018-06-14/Sun.png" alt="Картинка погоды">
         <div>22&deg 13&deg</div>
       </div>
-      <div class="days-or-hours-column">
+      <div class="equal-column">
         <div>сб</div>
         <img src="styles/assets_5 days_2018-06-14/Sun.png" alt="Картинка погоды">
         <div>22&deg 13&deg</div>
       </div>
-      <div class="days-or-hours-column">
+      <div class="equal-column">
         <div>вс</div>
         <img src="styles/assets_5 days_2018-06-14/Sun.png" alt="Картинка погоды">
         <div>22&deg 13&deg</div>
       </div>
-      <div class="days-or-hours-column">
+      <div class="equal-column">
         <div>пн</div>
         <img src="styles/assets_5 days_2018-06-14/Sun.png" alt="Картинка погоды">
         <div>22&deg 13&deg</div>
       </div>
-      <div class="days-or-hours-column">
+      <div class="equal-column">
         <div>вт</div>
         <img src="styles/assets_5 days_2018-06-14/Sun.png" alt="Картинка погоды">
         <div>22&deg 13&deg</div>
       </div>
-      <div class="days-or-hours-column">
+      <div class="equal-column">
         <div>ср</div>
         <img src="styles/assets_5 days_2018-06-14/Sun.png" alt="Картинка погоды">
         <div>22&deg 13&deg</div>

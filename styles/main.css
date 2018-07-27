@@ -4,7 +4,7 @@ body{
   margin: 0%;
 }
 
-.header__menu{
+.header__navigation{
   background-color: #ccc;
   padding: 15px;
 }
@@ -14,11 +14,15 @@ body{
   padding: 15px;
 }
 
-.city-info{
+.header-pollution-and-search__pollution{
+  width: 70%;
+}
+
+.main__current-weather{
   padding: 15px;
 }
 
-.city, .info{
+.main-current-weather__common-indicators, .main-current-weather__specific-indicators{
   width: 40%;
   font-size: 150%;
 }
@@ -27,10 +31,9 @@ section{
   margin: 0 0 40px 0;
 }
 
-.temperature-values{
+.main-hours-weather__temperature-values{
   height: 80%; 
-  border-color:dimgray; 
-  border-style: solid; 
+  border: solid dimgray;
   border-width: 0px 0px 2px 0px;
 }
 
@@ -49,7 +52,7 @@ footer{
   display: inline-block;
 }
 
-.days-or-hours-column{
+.equal-column{
   display: inline-block;
   width: 12%;
   text-align: center;
@@ -90,15 +93,15 @@ footer{
   border-width: 2px 0px 0px 0px;
 }
 
-.height100px{
+.precipitation-bar-low{
   height: 100px;
 }
 
-.height150px{
+.precipitation-bar-middle{
   height: 150px;
 }
 
-.height200px{
+.precipitation-bar-high{
   height: 200px;
 }
 
