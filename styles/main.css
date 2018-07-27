@@ -107,6 +107,11 @@ footer{
 
 /* ---------------------- остальное ---------------------- */
 
+
+ul{
+  padding:0px;
+}
+
 .rotate30{
   transform: rotate(30deg);
 }
@@ -196,6 +201,3 @@ img {
 .fontsize150pc{
   font-size: 150%;
 } */
-
-
-
