@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Сайт погоды</title>
-  <link rel="stylesheet" href="styles/main.css">
+  <link rel="stylesheet" href="styles/weather-details.css">
 </head>
 
 <body>
@@ -19,309 +19,261 @@
       </nav>
 
       <div class="header__common-and-search  header-common-and-search">
-        <div class="header-common-and-search__common">Загрязнение воздуха: 8.168...</div>
         <div class="header-common-and-search__search">
-          <img src="styles/assets_5 days_2018-06-14/Sunny Weather_5@3x.png" alt="Картинка текущей погоды" 
-          style="height: 50px;">
-              34&degC Ижевск, Россия
+          <img src="styles/assets_5 days_2018-06-14/Sunny Weather_5@3x.png" alt="Картинка текущей погоды"> 34&degC Ижевск, Россия
+        </div>
+        <div class="header-common-and-search__search">
+          <div class="input-wrapper">
+            <input type="text" placeholder="Поиск">
+          </div>
         </div>
       </div>
     </header>
 
     <main>
 
-      <section class="main__current-weather  main-current-weather">
 
-        <div class="main-current-weather__common-indicators  main-current-weather-common-indicators">
-          <div class="main-current-weather-common-indicators__text">
-            Ижевск, Россия
-            <br> среда
-            <br> облачно
-          </div>
-          <div class="pic">
-            <img src="styles/assets_5 days_2018-06-14/Sunny Weather_5@3x.png" alt="Картинка текущей погоды">
-            <div>
-              22&degC
-            </div>
-          </div>
-        </div>
-        <div class="main-current-weather__specific-indicators  main-current-weather-specific-indicators">
-          <div class="main-current-weather-specific-indicators__text">
-            Вероятность осадков: 20%
-            <br> Влажность: 45%
-            <br> Ветер: 11 км/ч
-            <br>
-          </div>
-          <nav>
-            <button id="button-temperature">Температура</button>
-            <button id="button-precipitation">Вероятность осадков</button>
-            <button id="button-wind">Ветер</button>
-          </nav>
-        </div>
-      </section>
-
-      <section class="main__hours-weather  main-hours-weather">
-
-        <div class="main-hours-weather__temperature-values  flex-container" id="temperature-values">
-
-          <div>
-            12
-            <div class="temperature-bar temperature-bar--12dg"></div>
-          </div>
-
-          <div>
-            1
-            <div class="temperature-bar temperature-bar--1dg"></div>
-          </div>
-
-          <div>
-            24
-            <div class="temperature-bar temperature-bar--24dg"></div>
-          </div>
-
-          <div>
-            16
-            <div class="temperature-bar temperature-bar--16dg"></div>
-          </div>
-
-          <div>
-            25
-            <div class="temperature-bar temperature-bar--25dg"></div>
-          </div>
-
-          <div>
-            9
-            <div class="temperature-bar temperature-bar--9dg"></div>
-          </div>
-
-          <div>
-            10
-            <div class="temperature-bar temperature-bar--10dg"></div>
-          </div>
-
-          <div>
-            12
-            <div class="temperature-bar temperature-bar--12dg"></div>
-          </div>
-        </div>
-
-        <div class="main-hours-weather__hours  flex-container" id="hours">
-          <div class="flex-item">17:00</div>
-          <div class="flex-item">20:00</div>
-          <div class="flex-item">23:00</div>
-          <div class="flex-item">2:00</div>
-          <div class="flex-item">5:00</div>
-          <div class="flex-item">8:00</div>
-          <div class="flex-item">11:00</div>
-          <div class="flex-item">14:00</div>
-        </div>
-
-        <div class="main-hours-weather__precipitation  flex-container" id="precipitation" style="display: none;">
-
-          <!-- <div class="flex-item-" style="width: 12.5%;"> -->
-          <div class="flex-item">
-            <div class="flex-container  precipitation-bar-down">
-              <div class="one-third  precipitation-bar precipitation-bar--10"></div>
-              <div class="one-third  precipitation-bar-text">
-                15%
-                <div class="precipitation-bar precipitation-bar--15"></div>
+      <div style="display: flex; align-items: center; text-align: center;">
+        <img class="rotate180" src="styles/more-than.png" alt="Предыдущие 5 дней" style="width: 40px; height: 40px;">
+        <div style="width: 100%">
+          <div style="display: flex; flex-direction: row;">
+            <div style="display: flex; flex-direction: column; align-items: center; width: 20%; border: 1px solid gray; ">
+              <div>Пт, 18 мая</div>
+              <div style="display: flex; width: 100%; border: solid gray; border-width: 1px 0 0 0;">
+                <div style="display: flex; flex-direction: column; align-items: center; width: 25%">
+                  <div>Ночь</div>
+                  <img src="styles/assets_5 days_2018-06-14/Cloudy Weather.png" alt="Ночь" style="width: 40px; height: 40px;">
+                  <div style="padding: 0 5px; margin-bottom: 2px; background-color: darkseagreen;">+8</div>
+                </div>
+                <div style="display: flex; flex-direction: column; align-items: center; width: 25%">
+                  <div>Утро</div>
+                  <img src="styles/assets_5 days_2018-06-14/Sunny Weather_2.png" alt="Утро" style="width: 40px; height: 40px;">
+                  <div style="padding: 0 5px; margin-bottom: 2px; background-color: gold;">+16</div>
+                </div>
+                <div style="display: flex; flex-direction: column; align-items: center; width: 25%">
+                  <div>День</div>
+                  <img src="styles/assets_5 days_2018-06-14/Weather_7.png" alt="День" style="width: 40px; height: 40px;">
+                  <div style="padding: 0 5px; margin-bottom: 2px; background-color:lightsalmon;">+21</div>
+                </div>
+                <div style="display: flex; flex-direction: column; align-items: center; width: 25%">
+                  <div>Вечер</div>
+                  <img src="styles/assets_5 days_2018-06-14/Weather_10.png" alt="Вечер" style="width: 40px; height: 40px;">
+                  <div style="padding: 0 5px; margin-bottom: 2px; background-color:gold;">+17</div>
+                </div>
               </div>
-              <div class="one-third  precipitation-bar precipitation-bar--18"></div>
             </div>
-            <div>17:00</div>
-          </div>
-
-          <div class="flex-item">
-            <div class="flex-container  precipitation-bar-down">
-              <div class="one-third  precipitation-bar precipitation-bar--25"></div>
-              <div class="one-third  precipitation-bar-text">
-                11%
-                <div class="precipitation-bar precipitation-bar--11"></div>
+            <div style="display: flex; flex-direction: column; align-items: center; width: 20%; border: 1px solid gray; ">
+              <div>Пт, 18 мая</div>
+              <div style="display: flex; width: 100%; border: solid gray; border-width: 1px 0 0 0;">
+                <div style="display: flex; flex-direction: column; align-items: center; width: 25%">
+                  <div>Ночь</div>
+                  <img src="styles/assets_5 days_2018-06-14/Cloudy Weather.png" alt="Ночь" style="width: 40px; height: 40px;">
+                  <div style="padding: 0 5px; margin-bottom: 2px; background-color: darkseagreen;">+8</div>
+                </div>
+                <div style="display: flex; flex-direction: column; align-items: center; width: 25%">
+                  <div>Утро</div>
+                  <img src="styles/assets_5 days_2018-06-14/Sunny Weather_2.png" alt="Утро" style="width: 40px; height: 40px;">
+                  <div style="padding: 0 5px; margin-bottom: 2px; background-color: gold;">+16</div>
+                </div>
+                <div style="display: flex; flex-direction: column; align-items: center; width: 25%">
+                  <div>День</div>
+                  <img src="styles/assets_5 days_2018-06-14/Weather_7.png" alt="День" style="width: 40px; height: 40px;">
+                  <div style="padding: 0 5px; margin-bottom: 2px; background-color:lightsalmon;">+21</div>
+                </div>
+                <div style="display: flex; flex-direction: column; align-items: center; width: 25%">
+                  <div>Вечер</div>
+                  <img src="styles/assets_5 days_2018-06-14/Weather_10.png" alt="Вечер" style="width: 40px; height: 40px;">
+                  <div style="padding: 0 5px; margin-bottom: 2px; background-color:gold;">+17</div>
+                </div>
               </div>
-              <div class="one-third  precipitation-bar precipitation-bar--19"></div>
             </div>
-            <div>20:00</div>
-          </div>
-
-          <div class="flex-item">
-            <div class="flex-container  precipitation-bar-down">
-              <div class="one-third  precipitation-bar precipitation-bar--6"></div>
-              <div class="one-third  precipitation-bar-text">
-                2%
-                <div class="precipitation-bar precipitation-bar--2"></div>
+            <div style="display: flex; flex-direction: column; align-items: center; width: 20%; border: 1px solid gray; ">
+              <div>Пт, 18 мая</div>
+              <div style="display: flex; width: 100%; border: solid gray; border-width: 1px 0 0 0;">
+                <div style="display: flex; flex-direction: column; align-items: center; width: 25%">
+                  <div>Ночь</div>
+                  <img src="styles/assets_5 days_2018-06-14/Cloudy Weather.png" alt="Ночь" style="width: 40px; height: 40px;">
+                  <div style="padding: 0 5px; margin-bottom: 2px; background-color: darkseagreen;">+8</div>
+                </div>
+                <div style="display: flex; flex-direction: column; align-items: center; width: 25%">
+                  <div>Утро</div>
+                  <img src="styles/assets_5 days_2018-06-14/Sunny Weather_2.png" alt="Утро" style="width: 40px; height: 40px;">
+                  <div style="padding: 0 5px; margin-bottom: 2px; background-color: gold;">+16</div>
+                </div>
+                <div style="display: flex; flex-direction: column; align-items: center; width: 25%">
+                  <div>День</div>
+                  <img src="styles/assets_5 days_2018-06-14/Weather_7.png" alt="День" style="width: 40px; height: 40px;">
+                  <div style="padding: 0 5px; margin-bottom: 2px; background-color:lightsalmon;">+21</div>
+                </div>
+                <div style="display: flex; flex-direction: column; align-items: center; width: 25%">
+                  <div>Вечер</div>
+                  <img src="styles/assets_5 days_2018-06-14/Weather_10.png" alt="Вечер" style="width: 40px; height: 40px;">
+                  <div style="padding: 0 5px; margin-bottom: 2px; background-color:gold;">+17</div>
+                </div>
               </div>
-              <div class="one-third  precipitation-bar precipitation-bar--1"></div>
             </div>
-            <div>23:00</div>
-          </div>
-
-          <div class="flex-item">
-            <div class="flex-container  precipitation-bar-down">
-              <div class="one-third  precipitation-bar precipitation-bar--4"></div>
-              <div class="one-third  precipitation-bar-text">
-                4%
-                <div class="precipitation-bar precipitation-bar--4"></div>
+            <div style="display: flex; flex-direction: column; align-items: center; width: 20%; border: 1px solid gray; ">
+              <div>Пт, 18 мая</div>
+              <div style="display: flex; width: 100%; border: solid gray; border-width: 1px 0 0 0;">
+                <div style="display: flex; flex-direction: column; align-items: center; width: 25%">
+                  <div>Ночь</div>
+                  <img src="styles/assets_5 days_2018-06-14/Cloudy Weather.png" alt="Ночь" style="width: 40px; height: 40px;">
+                  <div style="padding: 0 5px; margin-bottom: 2px; background-color: darkseagreen;">+8</div>
+                </div>
+                <div style="display: flex; flex-direction: column; align-items: center; width: 25%">
+                  <div>Утро</div>
+                  <img src="styles/assets_5 days_2018-06-14/Sunny Weather_2.png" alt="Утро" style="width: 40px; height: 40px;">
+                  <div style="padding: 0 5px; margin-bottom: 2px; background-color: gold;">+16</div>
+                </div>
+                <div style="display: flex; flex-direction: column; align-items: center; width: 25%">
+                  <div>День</div>
+                  <img src="styles/assets_5 days_2018-06-14/Weather_7.png" alt="День" style="width: 40px; height: 40px;">
+                  <div style="padding: 0 5px; margin-bottom: 2px; background-color:lightsalmon;">+21</div>
+                </div>
+                <div style="display: flex; flex-direction: column; align-items: center; width: 25%">
+                  <div>Вечер</div>
+                  <img src="styles/assets_5 days_2018-06-14/Weather_10.png" alt="Вечер" style="width: 40px; height: 40px;">
+                  <div style="padding: 0 5px; margin-bottom: 2px; background-color:gold;">+17</div>
+                </div>
               </div>
-              <div class="one-third  precipitation-bar precipitation-bar--7"></div>
             </div>
-            <div>2:00</div>
-          </div>
-
-          <div class="flex-item">
-            <div class="flex-container  precipitation-bar-down">
-              <div class="one-third  precipitation-bar precipitation-bar--23"></div>
-              <div class="one-third  precipitation-bar-text">
-                30%
-                <div class="precipitation-bar precipitation-bar--30"></div>
+            <div style="display: flex; flex-direction: column; align-items: center; width: 20%; border: 1px solid gray; ">
+              <div>Пт, 18 мая</div>
+              <div style="display: flex; width: 100%; border: solid gray; border-width: 1px 0 0 0;">
+                <div style="display: flex; flex-direction: column; align-items: center; width: 25%">
+                  <div>Ночь</div>
+                  <img src="styles/assets_5 days_2018-06-14/Cloudy Weather.png" alt="Ночь" style="width: 40px; height: 40px;">
+                  <div style="padding: 0 5px; margin-bottom: 2px; background-color: darkseagreen;">+8</div>
+                </div>
+                <div style="display: flex; flex-direction: column; align-items: center; width: 25%">
+                  <div>Утро</div>
+                  <img src="styles/assets_5 days_2018-06-14/Sunny Weather_2.png" alt="Утро" style="width: 40px; height: 40px;">
+                  <div style="padding: 0 5px; margin-bottom: 2px; background-color: gold;">+16</div>
+                </div>
+                <div style="display: flex; flex-direction: column; align-items: center; width: 25%">
+                  <div>День</div>
+                  <img src="styles/assets_5 days_2018-06-14/Weather_7.png" alt="День" style="width: 40px; height: 40px;">
+                  <div style="padding: 0 5px; margin-bottom: 2px; background-color:lightsalmon;">+21</div>
+                </div>
+                <div style="display: flex; flex-direction: column; align-items: center; width: 25%">
+                  <div>Вечер</div>
+                  <img src="styles/assets_5 days_2018-06-14/Weather_10.png" alt="Вечер" style="width: 40px; height: 40px;">
+                  <div style="padding: 0 5px; margin-bottom: 2px; background-color:gold;">+17</div>
+                </div>
               </div>
-              <div class="one-third  precipitation-bar precipitation-bar--29"></div>
             </div>
-            <div>5:00</div>
           </div>
 
-          <div class="flex-item">
-            <div class="flex-container  precipitation-bar-down">
-              <div class="one-third  precipitation-bar precipitation-bar--15"></div>
-              <div class="one-third  precipitation-bar-text">
-                13%
-                <div class="precipitation-bar precipitation-bar--13"></div>
+          <div style="background-color: #ccc; border: solid gray; border-width: 0 1px; ">Максимальная скорость ветра, м/с</div>
+
+          <div style="display: flex; flex-direction: row;">
+            <div style="width: 20%; display: flex; flex-direction: row; border: solid gray; border-width: 1px; padding: 5px 0;">
+              <div style="width: 25%">2</div>
+              <div style="width: 25%">5</div>
+              <div style="width: 25%">4</div>
+              <div style="width: 25%">5</div>
+            </div>
+            <div style="width: 20%; display: flex; flex-direction: row; border: solid gray; border-width: 1px; padding: 5px 0;">
+              <div style="width: 25%">2</div>
+              <div style="width: 25%">5</div>
+              <div style="width: 25%">4</div>
+              <div style="width: 25%">5</div>
+            </div>
+            <div style="width: 20%; display: flex; flex-direction: row; border: solid gray; border-width: 1px; padding: 5px 0;">
+              <div style="width: 25%">2</div>
+              <div style="width: 25%">5</div>
+              <div style="width: 25%">4</div>
+              <div style="width: 25%">5</div>
+            </div>
+            <div style="width: 20%; display: flex; flex-direction: row; border: solid gray; border-width: 1px; padding: 5px 0;">
+              <div style="width: 25%">2</div>
+              <div style="width: 25%">5</div>
+              <div style="width: 25%">4</div>
+              <div style="width: 25%">5</div>
+            </div>
+            <div style="width: 20%; display: flex; flex-direction: row; border: solid gray; border-width: 1px; padding: 5px 0;">
+              <div style="width: 25%">2</div>
+              <div style="width: 25%">5</div>
+              <div style="width: 25%">4</div>
+              <div style="width: 25%">5</div>
+            </div>
+          </div>
+
+          <div style="background-color: #ccc; border: solid gray; border-width: 0 1px; ">Осадки, мм</div>
+
+          <div style="display: flex; flex-direction: row;">
+            <div style="width: 20%; display: flex; flex-direction: row; align-items: flex-end; border: solid gray; border-width: 1px; ">
+              <div style="width: 25%">0</div>
+              <div style="width: 25%">0</div>
+              <img src="styles/assets_5 days_2018-06-14/Group_2.png" alt="Осадки" style="width: 40px; height: 40px;">
+              <img src="styles/assets_5 days_2018-06-14/Group_5.png" alt="Осадки" style="width: 40px; height: 40px;">
+            </div>
+            <div style="width: 20%; display: flex; flex-direction: row; align-items: flex-end; border: solid gray; border-width: 1px; ">
+              <div style="width: 25%">0</div>
+              <div style="width: 25%">0</div>
+              <img src="styles/assets_5 days_2018-06-14/Group_2.png" alt="Осадки" style="width: 40px; height: 40px;">
+              <img src="styles/assets_5 days_2018-06-14/Group_5.png" alt="Осадки" style="width: 40px; height: 40px;">
+            </div>
+            <div style="width: 20%; display: flex; flex-direction: row; align-items: flex-end; border: solid gray; border-width: 1px; ">
+              <div style="width: 25%">0</div>
+              <div style="width: 25%">0</div>
+              <img src="styles/assets_5 days_2018-06-14/Group_2.png" alt="Осадки" style="width: 40px; height: 40px;">
+              <img src="styles/assets_5 days_2018-06-14/Group_5.png" alt="Осадки" style="width: 40px; height: 40px;">
+            </div>
+            <div style="width: 20%; display: flex; flex-direction: row; align-items: flex-end; border: solid gray; border-width: 1px; ">
+              <div style="width: 25%">0</div>
+              <div style="width: 25%">0</div>
+              <img src="styles/assets_5 days_2018-06-14/Group_2.png" alt="Осадки" style="width: 40px; height: 40px;">
+              <img src="styles/assets_5 days_2018-06-14/Group_5.png" alt="Осадки" style="width: 40px; height: 40px;">
+            </div>
+            <div style="width: 20%; display: flex; flex-direction: row; align-items: flex-end; border: solid gray; border-width: 1px; ">
+              <div style="width: 25%">0</div>
+              <div style="width: 25%">0</div>
+              <img src="styles/assets_5 days_2018-06-14/Group_2.png" alt="Осадки" style="width: 40px; height: 40px;">
+              <img src="styles/assets_5 days_2018-06-14/Group_5.png" alt="Осадки" style="width: 40px; height: 40px;">
+            </div>
+          </div>
+
+        </div>
+        <img src="styles/more-than.png" alt="Предыдущие 5 дней" style="width: 40px; height:40px;">
+      </div>
+
+      <div style="display: flex; flex-direction: row;">
+        <div style="width: 50px;"></div>
+        <div style="width: 100%; display: flex; flex-direction: column; ">
+          <div style="width: 100%; display: flex; flex-direction: row; background-color: gainsboro; border: solid gray; border-width: 1px; padding: 5px; margin: 10px 0;">
+            <div style="width: 50%">Пятница, 18 мая, сегодня</div>
+            <div style="width: 50%">Солнце и луна</div>
+          </div>
+          <div style="width: 100%; display: flex; flex-direction: row;">
+            <div style="width: 50%;">
+              <div style="width: 100%; display: flex; flex-direction: row;">
+                <div style="width: 50%; text-align: center;">
+                  <img src="styles/assets_5 days_2018-06-14/Sun.png" alt="Картинка погоды" style="width: 100px; height: 100px;"> </div>
+                <div style="width: 50%; display: flex; flex-direction: column; justify-content: space-between;">
+                  <div>Долгота дня - 16 ч 43 м</div>
+                  <div>Восход - 4:02</div>
+                  <div>Заход - 20:45</div>
+                </div>
               </div>
-              <div class="one-third  precipitation-bar precipitation-bar--18"></div>
+              <div style="text-align: center; padding: 10px 0;">Сегодня день на 2 минуты длиннее, чем вчера</div>
             </div>
-            <div>8:00</div>
-          </div>
-
-          <div class="flex-item">
-            <div class="flex-container  precipitation-bar-down">
-              <div class="one-third  precipitation-bar precipitation-bar--8"></div>
-              <div class="one-third  precipitation-bar-text">
-                9%
-                <div class="precipitation-bar precipitation-bar--9"></div>
+            <div style="width: 50%;">
+              <div style="width: 100%; display: flex; flex-direction: row;">
+                <div style="width: 50%; text-align: center;">
+                  <img src="styles/assets_5 days_2018-06-14/Cloudy Weather_5@2x.png" alt="Картинка погоды" style="width: 100px; height: 100px;"> </div>
+                <div style="width: 50%; display: flex; flex-direction: column; justify-content: space-between;">
+                  <div>Луна растущая - 19%</div>
+                  <div>Восход - 7:40</div>
+                  <div>Заход - 10:58</div>
+                </div>
               </div>
-              <div class="one-third  precipitation-bar precipitation-bar--8"></div>
+              <div style="text-align: center; padding: 10px 0;">Полнолуние 20 мая, через 2 дня</div>
             </div>
-            <div>11:00</div>
           </div>
-
-          <div class="flex-item">
-            <div class="flex-container  precipitation-bar-down">
-              <div class="one-third  precipitation-bar precipitation-bar--6"></div>
-              <div class="one-third  precipitation-bar-text">
-                3%
-                <div class="precipitation-bar precipitation-bar--3"></div>
-              </div>
-              <div class="one-third  precipitation-bar precipitation-bar--2"></div>
-            </div>
-            <div>14:00</div>
-          </div>
-
         </div>
-
-        <div class="main-hours-weather__wind  flex-container" id="wind" style="display: none;">
-
-          <div class="flex-item">
-            <div>5 м/с</div>
-            <img class="rotate30" src="styles/long-left-arrow_icon-icons.com_70049.png" alt="Картинка погоды">
-            <div>17:00</div>
-          </div>
-
-          <div class="flex-item">
-            <div>5 м/с</div>
-            <img src="styles/long-left-arrow_icon-icons.com_70049.png" alt="Картинка погоды">
-            <div>20:00</div>
-          </div>
-
-          <div class="flex-item">
-            <div>5 м/с</div>
-            <img class="rotate30" src="styles/long-left-arrow_icon-icons.com_70049.png" alt="Картинка погоды">
-            <div>23:00</div>
-          </div>
-
-          <div class="flex-item">
-            <div>5 м/с</div>
-            <img src="styles/long-left-arrow_icon-icons.com_70049.png" alt="Картинка погоды">
-            <div>2:00</div>
-          </div>
-
-          <div class="flex-item">
-            <div>5 м/с</div>
-            <img class="rotate30" src="styles/long-left-arrow_icon-icons.com_70049.png" alt="Картинка погоды">
-            <div>5:00</div>
-          </div>
-
-          <div class="flex-item">
-            <div>5 м/с</div>
-            <img src="styles/long-left-arrow_icon-icons.com_70049.png" alt="Картинка погоды">
-            <div>8:00</div>
-          </div>
-
-          <div class="flex-item">
-            <div>5 м/с</div>
-            <img class="rotate30" src="styles/long-left-arrow_icon-icons.com_70049.png" alt="Картинка погоды">
-            <div>11:00</div>
-          </div>
-
-          <div class="flex-item">
-            <div>5 м/с</div>
-            <img src="styles/long-left-arrow_icon-icons.com_70049.png" alt="Картинка погоды">
-            <div>14:00</div>
-          </div>
-
-        </div>
-
-      </section>
-
-      <section class="main__days-weather  flex-container-changing-big">
-
-        <div class="flex-item   flex-container-changing-small  flex-item-black-line">
-          <div>ср</div>
-          <img src="styles/assets_5 days_2018-06-14/Sun.png" alt="Картинка погоды">
-          <div>22&deg 13&deg</div>
-        </div>
-
-        <div class="flex-item flex-container-changing-small flex-item-black-line">
-          <div>чт</div>
-          <img src="styles/assets_5 days_2018-06-14/Sun.png" alt="Картинка погоды">
-          <div>22&deg 13&deg</div>
-        </div>
-
-        <div class="flex-item flex-container-changing-small flex-item-black-line">
-          <div>пт</div>
-          <img src="styles/assets_5 days_2018-06-14/Sun.png" alt="Картинка погоды">
-          <div>22&deg 13&deg</div>
-        </div>
-
-        <div class="flex-item flex-container-changing-small flex-item-black-line">
-          <div>сб</div>
-          <img src="styles/assets_5 days_2018-06-14/Sun.png" alt="Картинка погоды">
-          <div>22&deg 13&deg</div>
-        </div>
-
-        <div class="flex-item flex-container-changing-small flex-item-black-line">
-          <div>вс</div>
-          <img src="styles/assets_5 days_2018-06-14/Sun.png" alt="Картинка погоды">
-          <div>22&deg 13&deg</div>
-        </div>
-
-        <div class="flex-item flex-container-changing-small flex-item-black-line">
-          <div>пн</div>
-          <img src="styles/assets_5 days_2018-06-14/Sun.png" alt="Картинка погоды">
-          <div>22&deg 13&deg</div>
-        </div>
-
-        <div class="flex-item flex-container-changing-small flex-item-black-line">
-          <div>вт</div>
-          <img src="styles/assets_5 days_2018-06-14/Sun.png" alt="Картинка погоды">
-          <div>22&deg 13&deg</div>
-        </div>
-
-        <div class="flex-item flex-container-changing-small flex-item-black-line">
-          <div>ср</div>
-          <img src="styles/assets_5 days_2018-06-14/Sun.png" alt="Картинка погоды">
-          <div>22&deg 13&deg</div>
-        </div>
-
-      </section>
+        <div style="width: 50px;"></div>
+      </div>
 
     </main>
 

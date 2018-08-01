@@ -11,7 +11,11 @@ html,body{
 }
 
 .content {
-  min-height: calc(100% - 70px);
+  min-height: calc(100% - 40px);
+}
+
+main{
+  margin-top: 10px;
 }
 
 .header__navigation{
@@ -19,14 +23,15 @@ html,body{
   padding: 15px;
 }
 
-.header__pollution-and-search{
+.header__common-and-search{
   display: flex;
   flex-direction:column; 
+  align-items: flex-start;
   background: rgb(236, 236, 236);
   padding: 15px;
 }
 
-.header-pollution-and-search__pollution{
+.header-common-and-search__common{
   /* width: 70%; */
   margin: 2px; 
   padding: 3px 25px 0 0;
@@ -166,66 +171,6 @@ footer{
   border-width: 1px 0 0;
 }
 
-/* ---------------------- адаптивный дизайн ---------------------- */
-
-@media (min-width: 600px) {
-  body{
-    font-size:16pt;
-  }
- 
-  .flex-container-changing-big {
-    flex-direction:row;
-  }
-  .flex-container-changing-small {
-    flex-direction:column;
-  }
-  .flex-item{
-    /* width: 12%; */
-  }
-  .flex-item-black-line{
-    border-width: 0;
-  }
-
-  .header__pollution-and-search{
-    flex-direction: row;
-    justify-content: space-between;
-  }
-
-  .main__current-weather{
-    flex-direction: row;
-  }
-
-  .main-current-weather__common-indicators, .main-current-weather__specific-indicators{
-    flex-direction: column;
-    width: 50%;
-  }
-
-  .main-current-weather__specific-indicators > nav{
-    flex-direction: row;
-  }
-
-  .main-current-weather-common-indicators__text, .main-current-weather-specific-indicators__text{
-    width: 100%;
-  }
-
-  .input-wrapper {
-    left: 0;
-  }
-  
-  .main-current-weather-specific-indicators > nav{
-    height: 60px;
-    align-items: center;
-  }
-
-  .main__hours-weather{
-    font-size: inherit;
-  }
-
-  /* .main-current-weather__specific-indicators button{
-    font-size: 12pt;
-  } */
-
-}
 
 /* ---------------------- полосы, бары ---------------------- */
 
@@ -449,6 +394,16 @@ button, input{
   font-size: 12pt;
 }
 
+.header-common-and-search__search{
+  display:  flex;
+  align-items:  center;
+}
+
+.header-common-and-search__search img{
+  width: 40px;
+  height: 30px;
+}
+
 .main-current-weather__specific-indicators button{
   font-size: 12pt;
 }
@@ -457,7 +412,7 @@ button, input{
   margin: 2px;
 }
 
-#button_today{
+#button_5days{
   background-color: DarkGrey;
 }
 
@@ -486,6 +441,10 @@ ul{
   transform: rotate(30deg);
 }
 
+.rotate180{
+  transform: rotate(180deg);
+}
+
 .flex-container-changing-small > img{
   width: 60px;
   height: 60px;
@@ -504,6 +463,8 @@ ul{
   position: relative; */
   margin: 2px;
   /* left: 20px; */
+  position: relative;
+  left: 25px;
 }
 
 .input-wrapper:before {
@@ -582,3 +543,67 @@ img {
 .fontsize150pc{
   font-size: 150%;
 } */
+
+
+/* ---------------------- адаптивный дизайн ---------------------- */
+
+@media (min-width: 600px) {
+  body{
+    font-size:16pt;
+  }
+
+  .flex-container-changing-big {
+    flex-direction:row;
+  }
+  .flex-container-changing-small {
+    flex-direction:column;
+  }
+  .flex-item{
+    /* width: 12%; */
+  }
+  .flex-item-black-line{
+    border-width: 0;
+  }
+
+  .header__common-and-search{
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .main__current-weather{
+    flex-direction: row;
+  }
+
+  .main-current-weather__common-indicators, .main-current-weather__specific-indicators{
+    flex-direction: column;
+    width: 50%;
+  }
+
+  .main-current-weather__specific-indicators > nav{
+    flex-direction: row;
+  }
+
+  .main-current-weather-common-indicators__text, .main-current-weather-specific-indicators__text{
+    width: 100%;
+  }
+
+  .input-wrapper {
+    /* position: static; */
+    left: 0;
+  }
+
+  .main-current-weather-specific-indicators > nav{
+    height: 60px;
+    align-items: center;
+  }
+
+  .main__hours-weather{
+    font-size: inherit;
+  }
+
+  /* .main-current-weather__specific-indicators button{
+    font-size: 12pt;
+  } */
+
+}
