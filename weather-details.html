@@ -1,10 +1,336 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8">
-    <title>Five-day weather forecast</title>
-  </head>
-  <body>
-    <h1>Подробный прогноз погоды на день</h1>
-  </body>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Сайт погоды</title>
+  <link rel="stylesheet" href="styles/main.css">
+</head>
+
+<body>
+
+  <div class="content">
+
+    <header>
+      <nav class="header__navigation  header-navigation">
+        <button id="button_today">Сегодня</button>
+        <button id="button_5days">5 дней</button>
+        <button id="button_history">История погоды</button>
+      </nav>
+
+      <div class="header__common-and-search  header-common-and-search">
+        <div class="header-common-and-search__common">Загрязнение воздуха: 8.168...</div>
+        <div class="header-common-and-search__search">
+          <img src="styles/assets_5 days_2018-06-14/Sunny Weather_5@3x.png" alt="Картинка текущей погоды" 
+          style="height: 50px;">
+              34&degC Ижевск, Россия
+        </div>
+      </div>
+    </header>
+
+    <main>
+
+      <section class="main__current-weather  main-current-weather">
+
+        <div class="main-current-weather__common-indicators  main-current-weather-common-indicators">
+          <div class="main-current-weather-common-indicators__text">
+            Ижевск, Россия
+            <br> среда
+            <br> облачно
+          </div>
+          <div class="pic">
+            <img src="styles/assets_5 days_2018-06-14/Sunny Weather_5@3x.png" alt="Картинка текущей погоды">
+            <div>
+              22&degC
+            </div>
+          </div>
+        </div>
+        <div class="main-current-weather__specific-indicators  main-current-weather-specific-indicators">
+          <div class="main-current-weather-specific-indicators__text">
+            Вероятность осадков: 20%
+            <br> Влажность: 45%
+            <br> Ветер: 11 км/ч
+            <br>
+          </div>
+          <nav>
+            <button id="button-temperature">Температура</button>
+            <button id="button-precipitation">Вероятность осадков</button>
+            <button id="button-wind">Ветер</button>
+          </nav>
+        </div>
+      </section>
+
+      <section class="main__hours-weather  main-hours-weather">
+
+        <div class="main-hours-weather__temperature-values  flex-container" id="temperature-values">
+
+          <div>
+            12
+            <div class="temperature-bar temperature-bar--12dg"></div>
+          </div>
+
+          <div>
+            1
+            <div class="temperature-bar temperature-bar--1dg"></div>
+          </div>
+
+          <div>
+            24
+            <div class="temperature-bar temperature-bar--24dg"></div>
+          </div>
+
+          <div>
+            16
+            <div class="temperature-bar temperature-bar--16dg"></div>
+          </div>
+
+          <div>
+            25
+            <div class="temperature-bar temperature-bar--25dg"></div>
+          </div>
+
+          <div>
+            9
+            <div class="temperature-bar temperature-bar--9dg"></div>
+          </div>
+
+          <div>
+            10
+            <div class="temperature-bar temperature-bar--10dg"></div>
+          </div>
+
+          <div>
+            12
+            <div class="temperature-bar temperature-bar--12dg"></div>
+          </div>
+        </div>
+
+        <div class="main-hours-weather__hours  flex-container" id="hours">
+          <div class="flex-item">17:00</div>
+          <div class="flex-item">20:00</div>
+          <div class="flex-item">23:00</div>
+          <div class="flex-item">2:00</div>
+          <div class="flex-item">5:00</div>
+          <div class="flex-item">8:00</div>
+          <div class="flex-item">11:00</div>
+          <div class="flex-item">14:00</div>
+        </div>
+
+        <div class="main-hours-weather__precipitation  flex-container" id="precipitation" style="display: none;">
+
+          <!-- <div class="flex-item-" style="width: 12.5%;"> -->
+          <div class="flex-item">
+            <div class="flex-container  precipitation-bar-down">
+              <div class="one-third  precipitation-bar precipitation-bar--10"></div>
+              <div class="one-third  precipitation-bar-text">
+                15%
+                <div class="precipitation-bar precipitation-bar--15"></div>
+              </div>
+              <div class="one-third  precipitation-bar precipitation-bar--18"></div>
+            </div>
+            <div>17:00</div>
+          </div>
+
+          <div class="flex-item">
+            <div class="flex-container  precipitation-bar-down">
+              <div class="one-third  precipitation-bar precipitation-bar--25"></div>
+              <div class="one-third  precipitation-bar-text">
+                11%
+                <div class="precipitation-bar precipitation-bar--11"></div>
+              </div>
+              <div class="one-third  precipitation-bar precipitation-bar--19"></div>
+            </div>
+            <div>20:00</div>
+          </div>
+
+          <div class="flex-item">
+            <div class="flex-container  precipitation-bar-down">
+              <div class="one-third  precipitation-bar precipitation-bar--6"></div>
+              <div class="one-third  precipitation-bar-text">
+                2%
+                <div class="precipitation-bar precipitation-bar--2"></div>
+              </div>
+              <div class="one-third  precipitation-bar precipitation-bar--1"></div>
+            </div>
+            <div>23:00</div>
+          </div>
+
+          <div class="flex-item">
+            <div class="flex-container  precipitation-bar-down">
+              <div class="one-third  precipitation-bar precipitation-bar--4"></div>
+              <div class="one-third  precipitation-bar-text">
+                4%
+                <div class="precipitation-bar precipitation-bar--4"></div>
+              </div>
+              <div class="one-third  precipitation-bar precipitation-bar--7"></div>
+            </div>
+            <div>2:00</div>
+          </div>
+
+          <div class="flex-item">
+            <div class="flex-container  precipitation-bar-down">
+              <div class="one-third  precipitation-bar precipitation-bar--23"></div>
+              <div class="one-third  precipitation-bar-text">
+                30%
+                <div class="precipitation-bar precipitation-bar--30"></div>
+              </div>
+              <div class="one-third  precipitation-bar precipitation-bar--29"></div>
+            </div>
+            <div>5:00</div>
+          </div>
+
+          <div class="flex-item">
+            <div class="flex-container  precipitation-bar-down">
+              <div class="one-third  precipitation-bar precipitation-bar--15"></div>
+              <div class="one-third  precipitation-bar-text">
+                13%
+                <div class="precipitation-bar precipitation-bar--13"></div>
+              </div>
+              <div class="one-third  precipitation-bar precipitation-bar--18"></div>
+            </div>
+            <div>8:00</div>
+          </div>
+
+          <div class="flex-item">
+            <div class="flex-container  precipitation-bar-down">
+              <div class="one-third  precipitation-bar precipitation-bar--8"></div>
+              <div class="one-third  precipitation-bar-text">
+                9%
+                <div class="precipitation-bar precipitation-bar--9"></div>
+              </div>
+              <div class="one-third  precipitation-bar precipitation-bar--8"></div>
+            </div>
+            <div>11:00</div>
+          </div>
+
+          <div class="flex-item">
+            <div class="flex-container  precipitation-bar-down">
+              <div class="one-third  precipitation-bar precipitation-bar--6"></div>
+              <div class="one-third  precipitation-bar-text">
+                3%
+                <div class="precipitation-bar precipitation-bar--3"></div>
+              </div>
+              <div class="one-third  precipitation-bar precipitation-bar--2"></div>
+            </div>
+            <div>14:00</div>
+          </div>
+
+        </div>
+
+        <div class="main-hours-weather__wind  flex-container" id="wind" style="display: none;">
+
+          <div class="flex-item">
+            <div>5 м/с</div>
+            <img class="rotate30" src="styles/long-left-arrow_icon-icons.com_70049.png" alt="Картинка погоды">
+            <div>17:00</div>
+          </div>
+
+          <div class="flex-item">
+            <div>5 м/с</div>
+            <img src="styles/long-left-arrow_icon-icons.com_70049.png" alt="Картинка погоды">
+            <div>20:00</div>
+          </div>
+
+          <div class="flex-item">
+            <div>5 м/с</div>
+            <img class="rotate30" src="styles/long-left-arrow_icon-icons.com_70049.png" alt="Картинка погоды">
+            <div>23:00</div>
+          </div>
+
+          <div class="flex-item">
+            <div>5 м/с</div>
+            <img src="styles/long-left-arrow_icon-icons.com_70049.png" alt="Картинка погоды">
+            <div>2:00</div>
+          </div>
+
+          <div class="flex-item">
+            <div>5 м/с</div>
+            <img class="rotate30" src="styles/long-left-arrow_icon-icons.com_70049.png" alt="Картинка погоды">
+            <div>5:00</div>
+          </div>
+
+          <div class="flex-item">
+            <div>5 м/с</div>
+            <img src="styles/long-left-arrow_icon-icons.com_70049.png" alt="Картинка погоды">
+            <div>8:00</div>
+          </div>
+
+          <div class="flex-item">
+            <div>5 м/с</div>
+            <img class="rotate30" src="styles/long-left-arrow_icon-icons.com_70049.png" alt="Картинка погоды">
+            <div>11:00</div>
+          </div>
+
+          <div class="flex-item">
+            <div>5 м/с</div>
+            <img src="styles/long-left-arrow_icon-icons.com_70049.png" alt="Картинка погоды">
+            <div>14:00</div>
+          </div>
+
+        </div>
+
+      </section>
+
+      <section class="main__days-weather  flex-container-changing-big">
+
+        <div class="flex-item   flex-container-changing-small  flex-item-black-line">
+          <div>ср</div>
+          <img src="styles/assets_5 days_2018-06-14/Sun.png" alt="Картинка погоды">
+          <div>22&deg 13&deg</div>
+        </div>
+
+        <div class="flex-item flex-container-changing-small flex-item-black-line">
+          <div>чт</div>
+          <img src="styles/assets_5 days_2018-06-14/Sun.png" alt="Картинка погоды">
+          <div>22&deg 13&deg</div>
+        </div>
+
+        <div class="flex-item flex-container-changing-small flex-item-black-line">
+          <div>пт</div>
+          <img src="styles/assets_5 days_2018-06-14/Sun.png" alt="Картинка погоды">
+          <div>22&deg 13&deg</div>
+        </div>
+
+        <div class="flex-item flex-container-changing-small flex-item-black-line">
+          <div>сб</div>
+          <img src="styles/assets_5 days_2018-06-14/Sun.png" alt="Картинка погоды">
+          <div>22&deg 13&deg</div>
+        </div>
+
+        <div class="flex-item flex-container-changing-small flex-item-black-line">
+          <div>вс</div>
+          <img src="styles/assets_5 days_2018-06-14/Sun.png" alt="Картинка погоды">
+          <div>22&deg 13&deg</div>
+        </div>
+
+        <div class="flex-item flex-container-changing-small flex-item-black-line">
+          <div>пн</div>
+          <img src="styles/assets_5 days_2018-06-14/Sun.png" alt="Картинка погоды">
+          <div>22&deg 13&deg</div>
+        </div>
+
+        <div class="flex-item flex-container-changing-small flex-item-black-line">
+          <div>вт</div>
+          <img src="styles/assets_5 days_2018-06-14/Sun.png" alt="Картинка погоды">
+          <div>22&deg 13&deg</div>
+        </div>
+
+        <div class="flex-item flex-container-changing-small flex-item-black-line">
+          <div>ср</div>
+          <img src="styles/assets_5 days_2018-06-14/Sun.png" alt="Картинка погоды">
+          <div>22&deg 13&deg</div>
+        </div>
+
+      </section>
+
+    </main>
+
+  </div>
+
+  <footer>
+    2018 &copy Copyright
+  </footer>
+
+</body>
+
 </html>
