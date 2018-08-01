@@ -1,7 +1,17 @@
 /* ---------------------- крупные блоки ---------------------- */
+/* * {
+  margin: 0;
+  padding: 0;
+} */
 
-body{
-  margin: 0%;
+html,body{
+  margin: 0;
+  height: 100%;
+  font-size:16pt;
+}
+
+.content {
+  min-height: calc(100% - 70px);
 }
 
 .header__navigation{
@@ -10,40 +20,99 @@ body{
 }
 
 .header__pollution-and-search{
+  display: flex;
+  flex-direction:column; 
   background: rgb(236, 236, 236);
   padding: 15px;
 }
 
 .header-pollution-and-search__pollution{
-  width: 70%;
+  /* width: 70%; */
+  margin: 2px; 
+  padding: 3px 25px 0 0;
 }
 
 .main__current-weather{
+  display: flex;
+  flex-direction: column;
   padding: 15px;
 }
 
 .main-current-weather__common-indicators, .main-current-weather__specific-indicators{
-  width: 40%;
-  font-size: 150%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  /* align-items: center; */
+  font-size: 125%;
+  margin-top: 10px;
 }
 
-section{
-  margin: 0 0 40px 0;
+.main-current-weather__specific-indicators > nav{
+  display: flex;
+  flex-direction: column;
 }
+
+.main-current-weather-common-indicators__text, .main-current-weather-specific-indicators__text{
+  height: 4.5em;
+  width: 50%;
+}
+
+.main-current-weather-common-indicators > .pic, .main-current-weather-specific-indicators > nav{
+  display: flex; 
+}
+
+.main-current-weather-common-indicators > .pic{
+  align-items: center;
+  height: 100px;
+}
+
+.main-current-weather-specific-indicators > nav{
+  align-items: normal;
+  height: 130px;
+}
+
+/* section{
+  margin: 0 0 40px 0;
+} */
 
 .main-hours-weather__temperature-values{
-  height: 80%; 
+  align-items: flex-end;
+  height:150px;
+  /* height: 80%;  */
   border: solid dimgray;
   border-width: 0px 0px 2px 0px;
+  text-align: center;
+}
+
+.main-hours-weather__precipitation{
+  align-items: flex-end;
+  height: 170px; 
+  text-align: center;
+}
+
+.main-hours-weather__wind{
+  align-items: flex-end;
+  height: 170px; 
+}
+
+.main__hours-weather, .main__days-weather{
+  margin: 30px 0;
+}
+
+.main__hours-weather{
+  font-size: 12pt;
 }
 
 footer{
-  padding:15px 0px;
+  /* position: fixed;
+  bottom: 0;
+  width: 100%;   
+  padding:15px 0px; */
+  height: 40px;
+  /* padding: 3px; */
   background-color: #ccc;
-  text-align:center;
-  position: absolute;
-  bottom: 0px;
-  width: 100vw;
+  text-align:center; 
+  line-height: 40px; 
 }
 
 /* ---------------------- положение и его расширения ---------------------- */
@@ -52,25 +121,294 @@ footer{
   display: inline-block;
 }
 
-.equal-column{
+/* .equal-column{
   display: inline-block;
   width: 12%;
   text-align: center;
-}
+} */
 
 /* .hour__bar-temperature,weekday__temperature-and-weather,{
   width: 12%;
   text-align: center; 
 } */
 
-/* ---------------------- полосы, бары ---------------------- */
-
-.one-hour-temperature4dg{
-  position: relative; 
-  top: 150px;
+.flex-container {
+  display: flex;
+  flex-direction:row;
+  justify-content: space-around;
+  padding:0;
 }
 
-.temperature-bar16dg{
+.flex-container-changing-big {
+  display: flex;
+  flex-direction:column;
+  justify-content: space-around;
+  align-items: center;
+  padding:0;
+}
+
+.flex-container-changing-small {
+  display: flex;
+  flex-direction:row;
+  justify-content: space-around;
+  align-items: center;
+  padding:0;
+}
+
+.flex-item{
+  width: 100%;
+  text-align: center;
+  margin: 0; 
+}
+
+.flex-item-black-line{
+  border: solid black;
+  border-width: 1px 0 0;
+}
+
+/* ---------------------- адаптивный дизайн ---------------------- */
+
+@media (min-width: 600px) {
+  body{
+    font-size:16pt;
+  }
+ 
+  .flex-container-changing-big {
+    flex-direction:row;
+  }
+  .flex-container-changing-small {
+    flex-direction:column;
+  }
+  .flex-item{
+    /* width: 12%; */
+  }
+  .flex-item-black-line{
+    border-width: 0;
+  }
+
+  .header__pollution-and-search{
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .main__current-weather{
+    flex-direction: row;
+  }
+
+  .main-current-weather__common-indicators, .main-current-weather__specific-indicators{
+    flex-direction: column;
+    width: 50%;
+  }
+
+  .main-current-weather__specific-indicators > nav{
+    flex-direction: row;
+  }
+
+  .main-current-weather-common-indicators__text, .main-current-weather-specific-indicators__text{
+    width: 100%;
+  }
+
+  .input-wrapper {
+    left: 0;
+  }
+  
+  .main-current-weather-specific-indicators > nav{
+    height: 60px;
+    align-items: center;
+  }
+
+  .main__hours-weather{
+    font-size: inherit;
+  }
+
+  /* .main-current-weather__specific-indicators button{
+    font-size: 12pt;
+  } */
+
+}
+
+/* ---------------------- полосы, бары ---------------------- */
+
+.temperature-bar{
+  width: 20px;
+  /* background-color: palevioletred; */
+  background-color: Coral;
+}
+
+.temperature-bar--12dg{
+  height: 60px; 
+}
+
+.temperature-bar--1dg{
+  height: 5px; 
+}
+
+.temperature-bar--24dg{
+  height: 120px; 
+}
+
+.temperature-bar--16dg{
+  height: 80px; 
+}
+
+.temperature-bar--25dg{
+  height: 125px; 
+}
+
+.temperature-bar--9dg{
+  height: 45px; 
+}
+
+.temperature-bar--10dg{
+  height: 50px; 
+}
+
+.temperature-bar--12dg{
+  height: 60px; 
+}
+
+.precipitation-bar-down{
+  align-items: flex-end;
+}
+
+.precipitation-bar{
+  background-color: lightskyblue; 
+  border:solid blue; 
+  border-width: 2px 0px 0px 0px;
+}
+
+.precipitation-bar-text{
+  font-size: 14pt; 
+  color: teal; 
+  font-weight: bold; 
+}
+
+.precipitation-bar--1{
+  height: 1px;
+}
+
+.precipitation-bar--2{
+  height: 2px;
+}
+
+.precipitation-bar--3{
+  height: 3px;
+}
+
+.precipitation-bar--4{
+  height: 4px;
+}
+
+.precipitation-bar--5{
+  height: 5px;
+}
+
+.precipitation-bar--6{
+  height: 6px;
+}
+
+.precipitation-bar--7{
+  height: 7px;
+}
+
+.precipitation-bar--8{
+  height: 8px;
+}
+
+.precipitation-bar--9{
+  height: 9px;
+}
+
+.precipitation-bar--10{
+  height: 10px;
+}
+
+.precipitation-bar--11{
+  height: 11px;
+}
+
+.precipitation-bar--12{
+  height: 12px;
+}
+
+.precipitation-bar--13{
+  height: 13px;
+}
+
+.precipitation-bar--14{
+  height: 14px;
+}
+
+.precipitation-bar--15{
+  height: 15px;
+}
+
+.precipitation-bar--16{
+  height: 16px;
+}
+
+.precipitation-bar--17{
+  height: 17px;
+}
+
+.precipitation-bar--18{
+  height: 18px;
+}
+
+.precipitation-bar--19{
+  height: 19px;
+}
+
+.precipitation-bar--20{
+  height: 20px;
+}
+
+.precipitation-bar--21{
+  height: 21px;
+}
+
+.precipitation-bar--22{
+  height: 22px;
+}
+
+.precipitation-bar--23{
+  height: 23px;
+}
+
+.precipitation-bar--24{
+  height: 24px;
+}
+
+.precipitation-bar--25{
+  height: 25px;
+}
+
+.precipitation-bar--26{
+  height: 16px;
+}
+
+.precipitation-bar--27{
+  height: 17px;
+}
+
+.precipitation-bar--28{
+  height: 18px;
+}
+
+.precipitation-bar--29{
+  height: 19px;
+}
+
+.precipitation-bar--30{
+  height: 20px;
+}
+
+/* .one-hour-temperature4dg{
+  position: relative; 
+  top: 150px;
+} */
+
+/* .temperature-bar16dg{
   background-color: powderblue; 
   width: 30px; 
   height: 200px; 
@@ -82,31 +420,63 @@ footer{
   width: 30px; 
   height: 50px; 
   margin: 0 auto;
-}
+} */
 
-.precipitation-bar{
+/* .precipitation-bar{
   font-size: 12pt; 
   background-color: powderblue; 
-  width: 33%; 
+  width: 33.3333333%; 
   border-color:dimgray; 
   border-style: solid; 
   border-width: 2px 0px 0px 0px;
 }
 
 .precipitation-bar-low{
-  height: 100px;
+  height: 50px;
 }
 
 .precipitation-bar-middle{
-  height: 150px;
+  height: 100px;
 }
 
 .precipitation-bar-high{
-  height: 200px;
-}
+  height: 150px;
+} */
 
 /* ---------------------- остальное ---------------------- */
 
+button, input{
+  font-size: 12pt;
+}
+
+.main-current-weather__specific-indicators button{
+  font-size: 12pt;
+}
+
+.header-navigation > btn{
+  margin: 2px;
+}
+
+#button_today{
+  background-color: DarkGrey;
+}
+
+.main-current-weather-specific-indicators button{
+  margin: 2px; 
+  height: 3em;
+}
+
+#button-temperature{
+  background-color: DarkGrey;
+}
+
+.main-hours-weather__temperature-values div{
+  text-align: center;
+}
+
+.one-third{
+  width: 33.3333%;
+}
 
 ul{
   padding:0px;
@@ -114,6 +484,11 @@ ul{
 
 .rotate30{
   transform: rotate(30deg);
+}
+
+.flex-container-changing-small > img{
+  width: 60px;
+  height: 60px;
 }
 
 /* .loupe:before{
@@ -125,15 +500,18 @@ ul{
 } */
 
 .input-wrapper {
-  position: relative;
+  /* width: 85%;
+  position: relative; */
+  margin: 2px;
+  /* left: 20px; */
 }
 
 .input-wrapper:before {
   content: '';
-  position: absolute;
-  top: 2px;
-  left: 2px;
-  display: block;
+  position: relative;
+  top: 5px;
+  /* left: -20px; */
+  display: inline-block;
   background: url('Zoom.ico');
   width: 18px;
   height: 18px;
@@ -152,7 +530,10 @@ img {
   margin: 5px;
 }
 
-
+.main-current-weather-common-indicators > img{
+  width: 60px; 
+  height: 60px;
+}
 
 /* ---------------------- цвета ---------------------- */
 
