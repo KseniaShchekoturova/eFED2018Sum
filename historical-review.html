@@ -1,10 +1,132 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8">
-    <title>Five-day weather forecast</title>
-  </head>
-  <body>
-    <h1>Историческая справка о погоде на текущий день</h1>
-  </body>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Сайт погоды</title>
+  <link rel="stylesheet" href="styles/historical-review.css">
+</head>
+
+<body>
+
+  <div class="content">
+
+    <header>
+      <nav class="header__navigation  header-navigation">
+        <button id="button_today">Сегодня</button>
+        <button id="button_5days">5 дней</button>
+        <button id="button_history">История погоды</button>
+      </nav>
+
+      <div class="header__common-and-search  header-common-and-search">
+        <div class="header-common-and-search__common">
+          Ижевск, Россия
+        </div>
+        <div class="header-common-and-search__search">
+          <div class="input-wrapper">
+            <input type="text" placeholder="Поиск">
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+
+      <div class="year-table">
+        <div class="year-table__line">
+          <div class="year-table__cell  year-table__cell--large  gray-cell"></div>
+          <div class="year-table__cell  year-table__cell--large">Январь</div>
+          <div class="year-table__cell  year-table__cell--large  gray-cell">Февраль</div>
+          <div class="year-table__cell  year-table__cell--large">Март</div>
+          <div class="year-table__cell  year-table__cell--large  gray-cell">Апрель</div>
+          <div class="year-table__cell  year-table__cell--large">Май</div>
+          <div class="year-table__cell  year-table__cell--large  gray-cell">Июнь</div>
+          <div class="year-table__cell  year-table__cell--large">Июль</div>
+          <div class="year-table__cell  year-table__cell--large  gray-cell">Август</div>
+          <div class="year-table__cell  year-table__cell--large">Сентябрь</div>
+          <div class="year-table__cell  year-table__cell--large  gray-cell">Октябрь</div>
+          <div class="year-table__cell  year-table__cell--large">Ноябрь</div>
+          <div class="year-table__cell  year-table__cell--large  gray-cell">Декабрь</div>
+        </div>
+
+        <div class="year-table__line">
+          <div class="year-table__cell  year-table__cell--small">Средний
+            <br>максимум</div>
+          <div class="year-table__cell  year-table__cell--large  gray-cell">2</div>
+          <div class="year-table__cell  year-table__cell--large">3</div>
+          <div class="year-table__cell  year-table__cell--large  gray-cell">1</div>
+          <div class="year-table__cell  year-table__cell--large">1</div>
+          <div class="year-table__cell  year-table__cell--large  gray-cell">2</div>
+          <div class="year-table__cell  year-table__cell--large">3</div>
+          <div class="year-table__cell  year-table__cell--large  gray-cell">5</div>
+          <div class="year-table__cell  year-table__cell--large">4</div>
+          <div class="year-table__cell  year-table__cell--large  gray-cell">2</div>
+          <div class="year-table__cell  year-table__cell--large">3</div>
+          <div class="year-table__cell  year-table__cell--large  gray-cell">1</div>
+          <div class="year-table__cell  year-table__cell--large">2</div>
+        </div>
+
+        <div class="year-table__line">
+          <div class="year-table__cell  year-table__cell--small  gray-cell">Средний
+            <br>минимум</div>
+          <div class="year-table__cell  year-table__cell--large">3</div>
+          <div class="year-table__cell  year-table__cell--large  gray-cell">1</div>
+          <div class="year-table__cell  year-table__cell--large">1</div>
+          <div class="year-table__cell  year-table__cell--large  gray-cell">2</div>
+          <div class="year-table__cell  year-table__cell--large">3</div>
+          <div class="year-table__cell  year-table__cell--large  gray-cell">5</div>
+          <div class="year-table__cell  year-table__cell--large">4</div>
+          <div class="year-table__cell  year-table__cell--large  gray-cell">2</div>
+          <div class="year-table__cell  year-table__cell--large">3</div>
+          <div class="year-table__cell  year-table__cell--large  gray-cell">1</div>
+          <div class="year-table__cell  year-table__cell--large">2</div>
+          <div class="year-table__cell  year-table__cell--large  gray-cell">1</div>
+        </div>
+
+        <div class="year-table__line">
+          <div class="year-table__cell  year-table__cell--small">Рекордный
+            <br>максимум</div>
+          <div class="year-table__cell  year-table__cell--large  gray-cell">2</div>
+          <div class="year-table__cell  year-table__cell--large">3</div>
+          <div class="year-table__cell  year-table__cell--large  gray-cell">1</div>
+          <div class="year-table__cell  year-table__cell--large">1</div>
+          <div class="year-table__cell  year-table__cell--large  gray-cell">2</div>
+          <div class="year-table__cell  year-table__cell--large">3</div>
+          <div class="year-table__cell  year-table__cell--large  gray-cell">5</div>
+          <div class="year-table__cell  year-table__cell--large">4</div>
+          <div class="year-table__cell  year-table__cell--large  gray-cell">2</div>
+          <div class="year-table__cell  year-table__cell--large">3</div>
+          <div class="year-table__cell  year-table__cell--large  gray-cell">1</div>
+          <div class="year-table__cell  year-table__cell--large">2</div>
+        </div>
+
+        <div class="year-table__line">
+          <div class="year-table__cell  year-table__cell--small  gray-cell">Рекордный
+            <br>минимум</div>
+          <div class="year-table__cell  year-table__cell--large">3</div>
+          <div class="year-table__cell  year-table__cell--large  gray-cell">1</div>
+          <div class="year-table__cell  year-table__cell--large">1</div>
+          <div class="year-table__cell  year-table__cell--large  gray-cell">2</div>
+          <div class="year-table__cell  year-table__cell--large">3</div>
+          <div class="year-table__cell  year-table__cell--large  gray-cell">5</div>
+          <div class="year-table__cell  year-table__cell--large">4</div>
+          <div class="year-table__cell  year-table__cell--large  gray-cell">2</div>
+          <div class="year-table__cell  year-table__cell--large">3</div>
+          <div class="year-table__cell  year-table__cell--large  gray-cell">1</div>
+          <div class="year-table__cell  year-table__cell--large">2</div>
+          <div class="year-table__cell  year-table__cell--large  gray-cell">1</div>
+        </div>
+
+      </div>
+
+    </main>
+
+  </div>
+
+  <footer>
+    2018 &copy Copyright
+  </footer>
+
+</body>
+
 </html>
