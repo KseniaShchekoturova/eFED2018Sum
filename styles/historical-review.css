@@ -1,0 +1,155 @@
+/* ---------------------- крупные блоки ---------------------- */
+
+html,body{
+  margin: 0;
+  height: 100%;
+  font-size:12pt;
+}
+
+.content {
+  min-height: calc(100% - 40px);
+}
+
+main{
+  margin-top: 10px;
+}
+
+.header__navigation{
+  background-color: #ccc;
+  padding: 15px;
+}
+
+.header__common-and-search{
+  display: flex;
+  flex-direction:row; 
+  justify-content: space-between;
+  align-items: flex-start;
+  background: rgb(236, 236, 236);
+  padding: 15px;
+}
+
+.header-common-and-search__common{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 50%;
+}
+
+footer{
+  height: 40px;
+  background-color: #ccc;
+  text-align:center; 
+  line-height: 40px; 
+}
+
+/* ---------------------- положение и его расширения ---------------------- */
+
+.flex-container {
+  display: flex;
+  flex-direction:row;
+  justify-content: space-around;
+  padding:0;
+}
+
+.flex-container-changing-big {
+  display: flex;
+  flex-direction:column;
+  justify-content: space-around;
+  align-items: center;
+  padding:0;
+}
+
+.flex-container-changing-small {
+  display: flex;
+  flex-direction:row;
+  justify-content: space-around;
+  align-items: center;
+  padding:0;
+}
+
+.flex-item{
+  width: 100%;
+  text-align: center;
+  margin: 0; 
+}
+
+.flex-item-black-line{
+  border: solid black;
+  border-width: 1px 0 0;
+}
+
+/* ---------------------- остальное ---------------------- */
+
+button, input{
+  font-size: 12pt;
+}
+
+.input-wrapper {
+  margin: 2px;
+  /* position: relative;
+  left: 25px; */
+}
+
+.input-wrapper:before {
+  content: '';
+  position: relative;
+  top: 5px;
+  /* left: -20px; */
+  display: inline-block;
+  background: url('Zoom.ico');
+  width: 18px;
+  height: 18px;
+}
+
+.input {
+  padding-left: 23px;
+}
+
+.header-common-and-search__search{
+  display:  flex;
+  align-items:  center;
+}
+
+.header-common-and-search__search img{
+  width: 40px;
+  height: 30px;
+}
+
+.header-navigation > btn{
+  margin: 2px;
+}
+
+#button_history{
+  background-color: DarkGrey;
+}
+
+.year-table__line{
+  display: flex; 
+  flex-direction: row; 
+  text-align: center;
+}
+
+.year-table__cell{
+  width: 100%; 
+  /* padding: 5px 0;  */
+}
+
+.year-table__cell--small{
+  line-height: 20px; 
+}
+
+.year-table__cell--large{
+  line-height: 40px; 
+}
+
+.gray-cell{
+  background-color: gainsboro;
+}
+
+
+
+
+.header-common-and-search__common{
+  font-size: 16pt;
+}
+
