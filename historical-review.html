@@ -3,6 +3,7 @@
 
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Сайт погоды</title>
   <link rel="stylesheet" href="styles/historical-review.css">
 </head>
@@ -11,11 +12,10 @@
 
   <div class="content">
 
-    <header>
-      <nav class="header__navigation  header-navigation">
-        <button id="button_today">Сегодня</button>
-        <button id="button_5days">5 дней</button>
-        <button id="button_history">История погоды</button>
+    <header style="display: none;" <nav class="header__navigation  header-navigation">
+      <button id="button_today">Сегодня</button>
+      <button id="button_5days">5 дней</button>
+      <button id="button_history">История погоды</button>
       </nav>
 
       <div class="header__common-and-search  header-common-and-search">
@@ -30,11 +30,30 @@
       </div>
     </header>
 
+    <header>
+      <nav class="header__navigation  header-navigation">
+        <button id="button_today">Сегодня</button>
+        <button id="button_5days">5 дней</button>
+        <button id="button_history">История погоды</button>
+      </nav>
+
+      <div class="header__common-and-search  header-common-and-search">
+        <div class="header-common-and-search__common">
+          <img src="styles/assets_5 days_2018-06-14/Sunny Weather_5@3x.png" alt="Картинка текущей погоды">34&degC Ижевск, Россия
+        </div>
+        <div class="header-common-and-search__search">
+          <div class="input-wrapper">
+            <input type="text" placeholder="Поиск">
+          </div>
+        </div>
+      </div>
+    </header>
+
     <main>
 
       <div class="year-table">
-        <div class="year-table__line">
-          <div class="year-table__cell  year-table__cell--large  gray-cell"></div>
+        <div class="year-table__line year-table__line--whole">
+          <div class="year-table__cell  year-table__cell--large  gray-cell  year-table__cell-empty">1</div>
           <div class="year-table__cell  year-table__cell--large">Январь</div>
           <div class="year-table__cell  year-table__cell--large  gray-cell">Февраль</div>
           <div class="year-table__cell  year-table__cell--large">Март</div>
@@ -49,9 +68,27 @@
           <div class="year-table__cell  year-table__cell--large  gray-cell">Декабрь</div>
         </div>
 
+        <div class="year-table__line year-table__line--part">
+          <div class="year-table__cell  year-table__cell--large  gray-cell  year-table__cell-empty">1</div>
+          <div class="year-table__cell  year-table__cell--large">Янв</div>
+          <div class="year-table__cell  year-table__cell--large  gray-cell">Фев</div>
+          <div class="year-table__cell  year-table__cell--large">Мар</div>
+          <div class="year-table__cell  year-table__cell--large  gray-cell">Апр</div>
+          <div class="year-table__cell  year-table__cell--large">Май</div>
+          <div class="year-table__cell  year-table__cell--large  gray-cell">Июнь</div>
+          <div class="year-table__cell  year-table__cell--large">Июль</div>
+          <div class="year-table__cell  year-table__cell--large  gray-cell">Авг</div>
+          <div class="year-table__cell  year-table__cell--large">Сен</div>
+          <div class="year-table__cell  year-table__cell--large  gray-cell">Окт</div>
+          <div class="year-table__cell  year-table__cell--large">Ноя</div>
+          <div class="year-table__cell  year-table__cell--large  gray-cell">Дек</div>
+        </div>
+
         <div class="year-table__line">
-          <div class="year-table__cell  year-table__cell--small">Средний
+          <div class="year-table__cell  year-table__cell--small--whole">Средний
             <br>максимум</div>
+          <div class="year-table__cell  year-table__cell--small--part">Сред.
+            <br>макс-м</div>
           <div class="year-table__cell  year-table__cell--large  gray-cell">2</div>
           <div class="year-table__cell  year-table__cell--large">3</div>
           <div class="year-table__cell  year-table__cell--large  gray-cell">1</div>
@@ -67,8 +104,10 @@
         </div>
 
         <div class="year-table__line">
-          <div class="year-table__cell  year-table__cell--small  gray-cell">Средний
+          <div class="year-table__cell  year-table__cell--small--whole  gray-cell">Средний
             <br>минимум</div>
+          <div class="year-table__cell  year-table__cell--small--part  gray-cell">Сред.
+            <br>мин-м</div>
           <div class="year-table__cell  year-table__cell--large">3</div>
           <div class="year-table__cell  year-table__cell--large  gray-cell">1</div>
           <div class="year-table__cell  year-table__cell--large">1</div>
@@ -84,8 +123,10 @@
         </div>
 
         <div class="year-table__line">
-          <div class="year-table__cell  year-table__cell--small">Рекордный
+          <div class="year-table__cell  year-table__cell--small--whole">Рекордный
             <br>максимум</div>
+          <div class="year-table__cell  year-table__cell--small--part">Рекорд.
+            <br>макс-м</div>
           <div class="year-table__cell  year-table__cell--large  gray-cell">2</div>
           <div class="year-table__cell  year-table__cell--large">3</div>
           <div class="year-table__cell  year-table__cell--large  gray-cell">1</div>
@@ -101,8 +142,10 @@
         </div>
 
         <div class="year-table__line">
-          <div class="year-table__cell  year-table__cell--small  gray-cell">Рекордный
+          <div class="year-table__cell  year-table__cell--small--whole  gray-cell">Рекордный
             <br>минимум</div>
+          <div class="year-table__cell  year-table__cell--small--part  gray-cell">Рекорд.
+            <br>мин-м</div>
           <div class="year-table__cell  year-table__cell--large">3</div>
           <div class="year-table__cell  year-table__cell--large  gray-cell">1</div>
           <div class="year-table__cell  year-table__cell--large">1</div>
