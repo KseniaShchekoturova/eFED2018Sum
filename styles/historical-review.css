@@ -14,7 +14,7 @@ main{
   margin-top: 10px;
 }
 
-.header__navigation{
+/* .header__navigation{
   background-color: #ccc;
   padding: 15px;
 }
@@ -33,7 +33,52 @@ main{
   flex-direction: row;
   align-items: center;
   width: 50%;
+} */
+
+.header__navigation{
+  background-color: #ccc;
+  padding: 15px;
 }
+
+.header__common-and-search{
+  display: flex;
+  flex-direction:column; 
+  align-items: flex-start;
+  background: rgb(236, 236, 236);
+  padding: 15px;
+}
+
+.header-common-and-search__common{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+button, input{
+  font-size: 12pt;
+}
+
+.input-wrapper {
+  margin: 2px;
+  position: relative;
+  left: 25px;
+}
+
+.input-wrapper:before {
+  content: '';
+  position: relative;
+  top: 5px;
+  /* left: -20px; */
+  display: inline-block;
+  background: url('Zoom.ico');
+  width: 18px;
+  height: 18px;
+}
+
+.input {
+  padding-left: 23px;
+}
+
 
 footer{
   height: 40px;
@@ -105,6 +150,20 @@ button, input{
   padding-left: 23px;
 }
 
+/* .header-common-and-search__search{
+  display:  flex;
+  align-items:  center;
+}
+
+.header-common-and-search__search img{
+  width: 40px;
+  height: 30px;
+}
+
+.header-navigation > btn{
+  margin: 2px;
+} */
+
 .header-common-and-search__search{
   display:  flex;
   align-items:  center;
@@ -123,9 +182,25 @@ button, input{
   background-color: DarkGrey;
 }
 
+.year-table{
+  display: flex;
+  flex-direction: row;
+}
+
 .year-table__line{
   display: flex; 
-  flex-direction: row; 
+  flex-direction: column; 
+  text-align: center;
+  width: 20%;
+}
+
+.year-table__line--part{
+  display: none; 
+}
+
+.year-table__line--whole{
+  display: flex; 
+  flex-direction: column; 
   text-align: center;
 }
 
@@ -134,9 +209,16 @@ button, input{
   /* padding: 5px 0;  */
 }
 
-.year-table__cell--small{
+.year-table__cell--small--part{
   line-height: 20px; 
+  display: none;
 }
+
+.year-table__cell--small--whole{
+  line-height: 20px; 
+  display: block;
+}
+
 
 .year-table__cell--large{
   line-height: 40px; 
@@ -147,9 +229,127 @@ button, input{
 }
 
 
+.header-common-and-search__common > img {
+  width: 50px;
+}
 
+.header-common-and-search__search{
+  font-size: 16pt;
+}
 
 .header-common-and-search__common{
   font-size: 16pt;
 }
+/* 
+.header-common-and-search__common{
+  font-size: 16pt;
+} */
 
+.year-table__cell-empty{
+  color: gainsboro;
+}
+
+/* ---------------------- адаптивный дизайн ---------------------- */
+
+
+
+@media (min-width: 600px) {
+  /* body{
+    font-size:14pt;
+  } */
+
+  .header__common-and-search{
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .header-common-and-search__search{
+    font-size: 16pt;
+  }
+
+  .input-wrapper {
+    /* position: static; */
+    left: 0;
+  }
+
+  .year-table__line--part{
+    display: flex; 
+    flex-direction: row; 
+    text-align: center;
+  }
+  
+  .year-table__line--whole{
+    display: none; 
+  }
+
+  .year-table__cell--small--part{
+    line-height: 20px; 
+    display: block;
+  }
+  
+  .year-table__cell--small--whole{
+    line-height: 20px; 
+    display: none;
+  }
+
+  .year-table__line{
+    width: 100%;
+    flex-direction: row;
+  }
+
+  .year-table{
+    flex-direction: column;
+  }
+
+}
+@media (min-width: 1000px) {
+  /* body{
+    font-size:14pt;
+  } */
+
+  .header__common-and-search{
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .header-common-and-search__search{
+    font-size: 16pt;
+  }
+
+  .input-wrapper {
+    /* position: static; */
+    left: 0;
+  }
+
+
+  .year-table__cell--small--whole{
+    line-height: 20px; 
+    display: block;
+  }
+  
+  .year-table__cell--small--part{
+    line-height: 20px; 
+    display: none;
+  }
+
+  .year-table__line{
+    width: 100%;
+    flex-direction: row;
+  }
+
+  .year-table{
+    flex-direction: column;
+  }
+
+  .year-table__line--part{
+    display: none; 
+  }
+  
+  .year-table__line--whole{
+    display: flex; 
+    flex-direction: row; 
+    text-align: center;
+  }
+}
