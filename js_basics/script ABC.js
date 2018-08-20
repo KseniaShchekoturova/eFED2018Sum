@@ -1,11 +1,3 @@
-function createSecretHolder(secret) {
-  var secretValue = secret;
-  return{
-    setSecret: (value) => secretValue = value,
-    getSecret: () => secretValue
-  };
-}
-
 // 1.	Подсчет Букв
 function countChar(Str,symb){
   var entrNum = 0, i = 0;
@@ -331,9 +323,6 @@ function findAnomaly(array, paramName){
 
 // 14.	Статистика погоды
 function weatherStat(obj){
-	// заберем данные из файла мок
-	// include("/HistoricalReviewMock.js");
-	
 	var array = historicalReviewMock[obj.city][obj.date.getFullYear()];
 	var i = 0, totalTemp = 0;
 	while (i < 12){
@@ -343,11 +332,6 @@ function weatherStat(obj){
 	return Math.round(totalTemp / 12);
 }
 
-// function include(url) {
-	// var script = document.createElement('script');
-	// script.src = url;
-	// document.getElementsByTagName('head')[0].appendChild(script);
-// }
 
 
 
