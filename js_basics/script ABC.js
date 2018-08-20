@@ -1,3 +1,10 @@
+function createSecretHolder(secret) {
+  var secretValue = secret;
+  return{
+    setSecret: (value) => secretValue = value,
+    getSecret: () => return secretValue
+  }
+}
 
 // 1.	Подсчет Букв
 function countChar(Str,symb){

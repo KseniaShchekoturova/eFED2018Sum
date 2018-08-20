@@ -50,12 +50,7 @@ function common(number,str){
   if (typeof(str)=='undefined'){
     return String(number);
   }else {
-    var returnValue = eval(String(number)+str)
-	if (returnValue < 1) {
-		return 0;
-	}else{
-		return returnValue;
-	}
+    return Math.floor(eval(String(number)+str));
   }
 };
 
@@ -73,23 +68,45 @@ function getMiddle(s){
   }
 };
 
-//http://www.codewars.com/kata/partition-on
-
-
-//http://www.codewars.com/kata/word-count - тесты пройдены на 66%
-function countWords(str) {
-   if (str==''){return 0}
-   var arr = str.split(' ');
-  var i = 0;
-  while (i<arr.length){
-    var cleanEl;
-    cleanEl = arr[i].replace(' ','');
-    //cleanEl = cleanEl.replace('','');
-    if (cleanEl == ''){
-		  arr.splice(i, 1);  
+//http://www.codewars.com/kata/partition-on - тесты пройдены на 100%
+function partitionOn(pred, items) {
+  var i = 0, item, arrTrue = [], arrFalse = [];
+  while(i < items.length){
+    item = items[i];
+    if (pred(item)){
+      arrTrue.push(item);
     }else{
-  		i++;
-  	}
+      arrFalse.push(item);
+    };
+    i++;
   }
-  return arr.length;
-};
+  
+  items.length = 0;
+  items.push(...arrFalse.concat(arrTrue));
+  return arrFalse.length;
+}
+
+//http://www.codewars.com/kata/word-count - тесты пройдены на 100%
+// function countWords_old(str) {
+	// if (str==''){return 0}
+	
+	// var arr = str.split(' ');
+	// var i = 0;
+	// while (i<arr.length){
+		// var cleanEl;
+		// cleanEl = arr[i].replace(' ','');
+		// //cleanEl = cleanEl.replace('','');
+		// if (cleanEl == ''){
+			 // arr.splice(i, 1);  
+		// }else{
+			// i++;
+		// }
+	// }
+	// return arr.length;
+// };
+
+function countWords(str) {
+	var arr = str.split(/\s/);
+	arr = arr.filter(word => word.length > 0);
+	return arr.length;
+}
