@@ -2,8 +2,8 @@ function createSecretHolder(secret) {
   var secretValue = secret;
   return{
     setSecret: (value) => secretValue = value,
-    getSecret: () => return secretValue
-  }
+    getSecret: () => secretValue
+  };
 }
 
 // 1.	Подсчет Букв
@@ -330,8 +330,24 @@ function findAnomaly(array, paramName){
 }
 
 // 14.	Статистика погоды
+function weatherStat(obj){
+	// заберем данные из файла мок
+	// include("/HistoricalReviewMock.js");
+	
+	var array = historicalReviewMock[obj.city][obj.date.getFullYear()];
+	var i = 0, totalTemp = 0;
+	while (i < 12){
+		totalTemp += array[i].avearage;
+		i++;
+	}
+	return Math.round(totalTemp / 12);
+}
 
-
+// function include(url) {
+	// var script = document.createElement('script');
+	// script.src = url;
+	// document.getElementsByTagName('head')[0].appendChild(script);
+// }
 
 
 
