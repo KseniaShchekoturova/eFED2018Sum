@@ -152,10 +152,14 @@ function reverseArrayInPlace(Arr){
 };
 
 // 6.	Свертка
-function mergeArrays(Arr1,Arr2){
-	var TotalArr = Arr1.concat(Arr2);
+function mergeArrays(...arrays){
 	
-	var i;
+	var TotalArr = [];
+	
+	for (var i = 0; i < arrays.length; i++){
+		TotalArr = TotalArr.concat(arrays[i]);
+	}
+	
 	for (i = 0; i < TotalArr.length; i++){
 		if (TotalArr.indexOf(TotalArr[i],i+1) > -1){
 			TotalArr.splice(i, 1);
