@@ -8,7 +8,7 @@ function countChar(Str,symb){
     }
 	i++;
   }
-  return(entrNum);
+  return entrNum;
 };
 
 // 2.	Глубокое сравнение
@@ -73,11 +73,9 @@ function chessBoard(w,h){
     for (j = 0; j < w; j++) {
 		ch = !ch;
 		if(ch){
-			// Str = Str + '#';
-			Str+='#';
+			Str += '#';
 		}else{
-			// Str = Str + ' ';
-			Str+=' ';
+			Str += ' ';
 		}      
     }
 	Str = Str + '\n';
@@ -85,14 +83,14 @@ function chessBoard(w,h){
 		ch = !ch;
 	}
   }
-  return(Str);
+  return Str;
 };
 
 // 4.	Диапазон
 function makeArray(elStart,elFinish,step){
 	if (elStart == undefined 
 	| elFinish == undefined){
-		return('bad options');
+		return 'bad options';
 	}
 	
 	var Arr = [], i = 0;
@@ -121,25 +119,23 @@ function makeArray(elStart,elFinish,step){
 		}	
 	}
 	
-	return(Arr);
+	return Arr;
 };
 
 // 5.	Наоборот
 function reverseArray(Arr){
-	var i = 0, newArr = [];
-	L = Arr.length;
+	var i = 0, newArr = [], L = Arr.length;
 	
 	while (i<L){
 		newArr[i] = Arr[L-i-1];
 		i++;
 	}
 	
-	return(newArr);
+	return newArr;
 };
 
 function reverseArrayInPlace(Arr){
-	var i = 0, val;
-	L = Arr.length;
+	var i = 0, val, L = Arr.length;
 	
 	while (i<L/2){
 		val = Arr[i];
@@ -148,12 +144,11 @@ function reverseArrayInPlace(Arr){
 		i++;
 	}
 	
-	return(Arr);
+	return Arr;
 };
 
 // 6.	Свертка
 function mergeArrays(...arrays){
-	
 	var TotalArr = [];
 	
 	for (var i = 0; i < arrays.length; i++){
@@ -172,8 +167,7 @@ function mergeArrays(...arrays){
 
 // 7.	Every и some
 function everyIsNaN(Arr){
-	var i;
-	for (i = 0; i < Arr.length; i++){
+	for (var i = 0; i < Arr.length; i++){
 		if (!isNaN(Arr[i])){
 			return false;
 		}
@@ -182,8 +176,7 @@ function everyIsNaN(Arr){
 };
 
 function someIsNaN(Arr){
-	var i;
-	for (i = 0; i < Arr.length; i++){
+	for (var i = 0; i < Arr.length; i++){
 		if (isNaN(Arr[i])){
 			return true;
 		}
@@ -327,8 +320,8 @@ function findAnomaly(array, paramName){
 
 // 14.	Статистика погоды
 function weatherStat(obj){
-	var array = historicalReviewMock[obj.city][obj.date.getFullYear()];
-	var i = 0, totalTemp = 0;
+	var array = historicalReviewMock[obj.city][obj.date.getFullYear()],
+		i = 0, totalTemp = 0;
 	while (i < 12){
 		totalTemp += array[i].avearage;
 		i++;
