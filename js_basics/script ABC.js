@@ -12,36 +12,6 @@ function countChar(Str,symb){
 };
 
 // 2.	Глубокое сравнение
-// function deepCompare_old(Value1,Value2){
-	// // проверка на типы
-	// if (typeof Value1 != typeof Value2){
-	  // return false;
-	// }
-	
-	// // проверка на количество свойств
-	// var Num1 = 0, Num2 = 0;
-	// for(var key in Value1) {
-		// Num1++;
-	// }
-	// for(var key in Value2) {
-		// Num2++;
-	// }
-	// if (Num1 != Num2){
-		// return false;
-	// }
-	
-	
-	// // проверка значений свойств
-	// for(var key in Value1) {
-		// if (Value1[key] !== Value2[key]){
-			// return false;
-		// }
-	// }
-	
-	// return true;
-// };
-
-//2.	Глубокое сравнение
 function deepCompare(Value1,Value2){
 	// проверка на типы
 	if (typeof Value1 != typeof Value2){
@@ -200,33 +170,6 @@ function multiply(a,b){
 		return multiply(a, b);
 	}
 };
-
-// 9.	Кавычки в тексте
-// function replaceQuotes_old(text){
-	// var regexpOpening = /‘/ig,
-		// regexpClosing = /’/ig,
-		// resultOpening,resultClosing;
-	
-	// while (true){
-		// resultOpening = regexpOpening.exec(text);
-		// resultClosing = regexpClosing.exec(text);
-		
-		// if ((!!resultOpening)&&(!!resultClosing)){
-			// posOpening = resultOpening.index;
-			// posClosing = resultClosing.index;
-			// if (posOpening < posClosing){
-				// text = text.substring(0,posOpening) + '"' + text.substring(posOpening+1);
-				// text = text.substring(0,posClosing) + '"' + text.substring(posClosing+1);
-			// }
-			// regexpOpening.lastIndex = posClosing + 1;
-			// regexpClosing.lastIndex = posClosing + 1;
-		// }else{
-			// break;
-		// }
-	// }
-	  
-	// return text;
-// }
 
 // 9.	Кавычки в тексте
 function replaceQuotes(text){
