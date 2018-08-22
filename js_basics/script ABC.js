@@ -58,33 +58,22 @@ function chessBoard(width,height){
 
 // 4.	Диапазон
 function makeArray(elStart, elFinish, step){
-	if (elStart == undefined 
-	| elFinish == undefined){
-		return 'bad options';
-	}
+	if (elStart == undefined | elFinish == undefined){return 'bad options';}
+	if(step == undefined){step = 1;}
 	
-	var Arr = [], i = 0;
-	
-	if(step == undefined){
-		step = 1;
-	}
+	var Arr = [];	
 		
 	if(elStart == elFinish){
-		Arr[0] = elStart;
+		Arr.push(elStart);
 	}else if(elStart < elFinish){
 		while(elStart <= elFinish){
-			Arr[i] = elStart;
-			i++;
+			Arr.push(elStart);
 			elStart += step;
 		}	
-	}
-	else{
-		if (step > 0){
-			step = -step;
-		}
+	}else{
+		if (step > 0){step = -step;}
 		while(elStart >= elFinish){
-			Arr[i] = elStart;
-			i++;
+			Arr.push(elStart);
 			elStart += step;
 		}	
 	}
