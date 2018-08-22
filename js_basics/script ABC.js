@@ -1,9 +1,9 @@
 // 1.	Подсчет Букв
-function countChar(Str,symb){
+function countChar(Str, symb){
   var entrNum = 0, i = 0;
   N = Str.length;
-  while(i<N){
-    if(Str[i]==symb){
+  while (i < N){
+    if(Str[i] == symb){
     	entrNum++;
     }
 	i++;
@@ -12,7 +12,7 @@ function countChar(Str,symb){
 };
 
 // 2.	Глубокое сравнение
-function deepCompare(Value1,Value2){
+function deepCompare(Value1, Value2){
 	// проверка на типы
 	if (typeof Value1 != typeof Value2){
 	  return false;
@@ -37,10 +37,10 @@ function deepCompare(Value1,Value2){
 };
 
 // 3.	Шахматная доска
-function chessBoard(w,h){
+function chessBoard(width,height){
   var i, j, Str = '', ch = false;
-  for (i = 0; i < h; i++) {
-    for (j = 0; j < w; j++) {
+  for (i = 0; i < height; i++) {
+    for (j = 0; j < width; j++) {
 		ch = !ch;
 		if(ch){
 			Str += '#';
@@ -49,7 +49,7 @@ function chessBoard(w,h){
 		}      
     }
 	Str = Str + '\n';
-	if(w%2==0){
+	if(w%2 == 0){
 		ch = !ch;
 	}
   }
@@ -57,7 +57,7 @@ function chessBoard(w,h){
 };
 
 // 4.	Диапазон
-function makeArray(elStart,elFinish,step){
+function makeArray(elStart, elFinish, step){
 	if (elStart == undefined 
 	| elFinish == undefined){
 		return 'bad options';
@@ -65,27 +65,27 @@ function makeArray(elStart,elFinish,step){
 	
 	var Arr = [], i = 0;
 	
-	if(step==undefined){
+	if(step == undefined){
 		step = 1;
 	}
 		
-	if(elStart==elFinish){
+	if(elStart == elFinish){
 		Arr[0] = elStart;
 	}else if(elStart < elFinish){
-		while(elStart<=elFinish){
+		while(elStart <= elFinish){
 			Arr[i] = elStart;
 			i++;
-			elStart+=step;
+			elStart += step;
 		}	
 	}
 	else{
-		if (step>0){
+		if (step > 0){
 			step = -step;
 		}
-		while(elStart>=elFinish){
+		while(elStart >= elFinish){
 			Arr[i] = elStart;
 			i++;
-			elStart+=step;
+			elStart += step;
 		}	
 	}
 	
@@ -96,7 +96,7 @@ function makeArray(elStart,elFinish,step){
 function reverseArray(Arr){
 	var i = 0, newArr = [], L = Arr.length;
 	
-	while (i<L){
+	while (i < L){
 		newArr[i] = Arr[L-i-1];
 		i++;
 	}
@@ -105,12 +105,12 @@ function reverseArray(Arr){
 };
 
 function reverseArrayInPlace(Arr){
-	var i = 0, val, L = Arr.length;
+	var i = 0, pastValue, L = Arr.length;
 	
 	while (i<L/2){
-		val = Arr[i];
+		pastValue = Arr[i];
 		Arr[i] = Arr[L-i-1];
-		Arr[L-i-1] = val;
+		Arr[L-i-1] = pastValue;
 		i++;
 	}
 	
@@ -126,7 +126,7 @@ function mergeArrays(...arrays){
 	}
 	
 	for (i = 0; i < TotalArr.length; i++){
-		if (TotalArr.indexOf(TotalArr[i],i+1) > -1){
+		if (TotalArr.indexOf(TotalArr[i], i+1) > -1){
 			TotalArr.splice(i, 1);
 			i--;
 		}
@@ -163,7 +163,7 @@ function multiplyOrThrow(a, b) {
   }
 };
 
-function multiply(a,b){
+function multiply(a, b){
 	try{
 		return multiplyOrThrow(a, b);
 	}catch{
@@ -179,8 +179,8 @@ function replaceQuotes(text){
 		if (!regResult){break};
 		for (var i = 0; i < regResult.length; i++){
 			subStr = regResult[i];
-			subStr = '"' + subStr.substring(1,subStr.length-1) + '"';
-			text = text.replace(regResult[i],subStr);
+			subStr = '"' + subStr.substring(1, subStr.length-1) + '"';
+			text = text.replace(regResult[i], subStr);
 		}
 	}
 	return text;
@@ -238,9 +238,9 @@ function getNames(date){
 };
 
 // 12.	Разница в годах
-function differenceInYears(dateStart,dateFinish){
+function differenceInYears(dateStart, dateFinish){
 	daysBetween = (dateFinish - dateStart) / (24*3600*1000);
-	yearsBeetween = Math.round(10 * daysBetween / 365)/10;
+	yearsBeetween = Math.round(10 * daysBetween / 365) / 10;
 	return yearsBeetween;
 }
 
