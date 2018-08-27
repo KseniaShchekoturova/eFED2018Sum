@@ -1,21 +1,23 @@
 // 13.	Погода Anomaly
 function findAnomaly(array, paramName) {
-  var maxValue,
-    minValue,
-    currentValue,
-    extremesObject = {
+  var maxValue;
+  var minValue;
+  var currentValue;
+  var extremesObject = {
       max: array[0],
       min: array[0]
     };
 
   for (var i = 0; i < array.length; i++) {
     maxValue = Number(extremesObject.max[paramName]);
+    currentValue = Number(array[i][paramName]);
+    if (maxValue < currentValue) {extremesObject.max = array[i];}
+  }
+  
+  for (var i = 0; i < array.length; i++) {
     minValue = Number(extremesObject.min[paramName]);
     currentValue = Number(array[i][paramName]);
-
-    if (maxValue < currentValue) extremesObject.max = array[i];
-
-    if (minValue > currentValue) extremesObject.min = array[i];
+    if (minValue > currentValue) {extremesObject.min = array[i];}
   }
 
   return extremesObject;
@@ -23,10 +25,10 @@ function findAnomaly(array, paramName) {
 
 // 14.	Статистика погоды
 function getAverageTemperature(requestData) {
-  var i = 0,
-    totalTemperature = 0,
-    year = requestData.date.getFullYear(),
-    temperaturesArray = historicalReviewMock[requestData.city][year];
+  var i = 0;
+  var totalTemperature = 0;
+  var year = requestData.date.getFullYear();
+  var temperaturesArray = historicalReviewMock[requestData.city][year];
 
   while (i < 12) {
     totalTemperature += temperaturesArray[i].average;

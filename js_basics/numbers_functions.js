@@ -20,7 +20,7 @@ function findNumbers(array) {
   var numbersArray = [];
 
   for (var i = 0; i < array.length; i++) {
-    if (isNumber(array[i])) numbersArray.push(array[i]);
+    if (isNumber(array[i])) {numbersArray.push(array[i]);}
   }
 
   return numbersArray;

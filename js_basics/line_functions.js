@@ -1,11 +1,11 @@
 // 1.	Подсчет Букв
 function countChar(text, char) {
-  var entryNumber = 0,
-    i = 0,
-    length = text.length;
+  var entryNumber = 0;
+  var i = 0;
+  var length = text.length;
 
   while (i < length) {
-    if (text[i] == char) entryNumber++;
+    if (text[i] == char) {entryNumber++;}
     i++;
   }
 
@@ -13,20 +13,24 @@ function countChar(text, char) {
 }
 
 // 9.	Кавычки в тексте
-function replaceSingleQuotesWithDouble(text) {
-  var regExp = /‘.+?’/g,
-    regExpResult,
-    subString;
+function replaceAllSingleQuotesWithDouble(text) {
+  var regExp = /‘.+?’/g;
+  var regExpResult;
 
   while (true) {
     regExpResult = text.match(regExp);
-    if (!regExpResult) break;
+    if (!regExpResult) {break;}
     for (var i = 0; i < regExpResult.length; i++) {
-      subString = regExpResult[i];
-      subString = '"' + subString.substring(1, subString.length - 1) + '"';
-      text = text.replace(regExpResult[i], subString);
+      text = replaceSpecificSingleQuotesWithDouble(text, regExpResult[i]);
     }
   }
 
+  return text;
+}
+
+function replaceSpecificSingleQuotesWithDouble(text, subStringBefore) {
+  var subStringAfter = '"' + subStringBefore.substring(1, subStringBefore.length - 1) + '"';
+  text = text.replace(subStringBefore, subStringAfter);
+  
   return text;
 }

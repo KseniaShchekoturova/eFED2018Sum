@@ -1,12 +1,10 @@
 // 3.	Шахматная доска
 function makeChessBoard(width, height) {
-  var i,
-    j,
-    chessBoard = "",
-    shift = false;
+  var chessBoard = "";
+  var shift = false;
 
-  for (i = 0; i < height; i++) {
-    for (j = 0; j < width; j++) {
+  for (var i = 0; i < height; i++) {
+    for (var j = 0; j < width; j++) {
       shift = !shift;
       if (shift) {
         chessBoard += "#";
@@ -16,7 +14,7 @@ function makeChessBoard(width, height) {
     }
 
     chessBoard += "\n";
-    if (width % 2 == 0) shift = !shift;
+    if (width % 2 == 0) {shift = !shift;}
   }
 
   return chessBoard;

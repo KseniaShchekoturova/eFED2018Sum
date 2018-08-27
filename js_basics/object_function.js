@@ -1,8 +1,8 @@
 // 2.	Глубокое сравнение
 function compareContent(value1, value2) {
-  if (typeof value1 != typeof value2) return false;
+  if (typeof value1 != typeof value2) {return false;}
 
-  if (typeof value1 != "object") return value1 === value2;
+  if (typeof value1 != "object") {return value1 === value2;}
 
   // далее для объектов
   if (Object.keys(value1).length != Object.keys(value2).length) {
@@ -11,7 +11,7 @@ function compareContent(value1, value2) {
 
   try {
     for (var key in value1) {
-      if (!compareContent(value1[key], value2[key])) return false;
+      if (!compareContent(value1[key], value2[key])) {return false;}
     }
   } catch (err) {
     return false;

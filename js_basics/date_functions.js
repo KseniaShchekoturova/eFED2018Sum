@@ -4,8 +4,8 @@ function getMonthAndWeekDayNames(date) {
 }
 
 function getMonthName(date) {
-  var MonthName,
-    MonthNumber = date.getMonth();
+  var MonthName;
+  var MonthNumber = date.getMonth();
 
   switch (MonthNumber) {
     case 0:
@@ -50,8 +50,8 @@ function getMonthName(date) {
 }
 
 function getWeekDayName(date) {
-  var WeekDayName,
-    WeekDayNumber = date.getDay();
+  var WeekDayName;
+  var WeekDayNumber = date.getDay();
 
   switch (WeekDayNumber) {
     case 0:
@@ -82,8 +82,10 @@ function getWeekDayName(date) {
 
 // 12.	Разница в годах
 function getDifferenceInYears(startDate, finishDate) {
-  var differenceInDays = (finishDate - startDate) / (24 * 3600 * 1000);
-  var differenceInYears = Math.round((10 * differenceInDays) / 365) / 10;
+  var millisecondsInDay	= 24 * 3600 * 1000;
+  var differenceInDays = (finishDate - startDate) / millisecondsInDay;
+  var daysInYear = 365;
+  var differenceInYears = Math.round((10 * differenceInDays) / daysInYear) / 10;
 
   return differenceInYears;
 }
