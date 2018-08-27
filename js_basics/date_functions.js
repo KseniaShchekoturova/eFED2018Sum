@@ -1,7 +1,14 @@
 // 11.	День и месяц
-function getMonthAndWeekDayNames(date){
+function getMonthAndWeekDayNames(date) {
+	
+	return getMonthName(date) + ', ' + getWeekDayName(date);
+}
+
+function getMonthName(date) {
+	
 	var MonthName, MonthNumber = date.getMonth();
-	switch(MonthNumber){
+	
+	switch (MonthNumber) {
 		case 0: MonthName = 'January'; break;
 		case 1: MonthName = 'February'; break;
 		case 2: MonthName = 'March'; break;
@@ -16,8 +23,14 @@ function getMonthAndWeekDayNames(date){
 		case 11: MonthName = 'December'; break;
 	}
 	
+	return MonthName;
+}
+
+function getWeekDayName(date) {
+	
 	var WeekDayName, WeekDayNumber = date.getDay();
-	switch(WeekDayNumber){
+	
+	switch (WeekDayNumber) {
 		case 0: WeekDayName = 'Sunday'; break;
 		case 1: WeekDayName = 'Monday'; break;
 		case 2: WeekDayName = 'Tuesday'; break;
@@ -27,12 +40,13 @@ function getMonthAndWeekDayNames(date){
 		case 6: WeekDayName = 'Saturday'; break;
 	}
 	
-	return MonthName + ', ' + WeekDayName;
-};
+	return WeekDayName;
+}
 
 // 12.	Разница в годах
-function getDifferenceInYears(startDate, finishDate){
-	daysBetween = (finishDate - startDate) / (24*3600*1000);
+function getDifferenceInYears(startDate, finishDate) {
+	
+	daysBetween = (finishDate - startDate) / (24 * 3600 * 1000);
 	yearsBeetween = Math.round(10 * daysBetween / 365) / 10;
 	return yearsBeetween;
 }
