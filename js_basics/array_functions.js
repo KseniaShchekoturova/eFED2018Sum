@@ -33,11 +33,11 @@ function getDiapason(start, finish, step) {
 // 5.	Наоборот
 function reverseArray(array) {
   var i = 0;
-  var L = array.length;
+  var length = array.length;
   var reversedArray = [];
 
-  while (i < L) {
-    reversedArray[i] = array[L - i - 1];
+  while (i < length) {
+    reversedArray[i] = array[length - i - 1];
     i++;
   }
 
