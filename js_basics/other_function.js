@@ -14,7 +14,9 @@ function makeChessBoard(width, height) {
     }
 
     chessBoard += "\n";
-    if (width % 2 == 0) {shift = !shift;}
+    if (width % 2 == 0) {
+      shift = !shift;
+    }
   }
 
   return chessBoard;

@@ -4,20 +4,24 @@ function findAnomaly(array, paramName) {
   var minValue;
   var currentValue;
   var extremesObject = {
-      max: array[0],
-      min: array[0]
-    };
+    max: array[0],
+    min: array[0]
+  };
 
   for (var i = 0; i < array.length; i++) {
     maxValue = Number(extremesObject.max[paramName]);
     currentValue = Number(array[i][paramName]);
-    if (maxValue < currentValue) {extremesObject.max = array[i];}
+    if (maxValue < currentValue) {
+      extremesObject.max = array[i];
+    }
   }
-  
+
   for (var i = 0; i < array.length; i++) {
     minValue = Number(extremesObject.min[paramName]);
     currentValue = Number(array[i][paramName]);
-    if (minValue > currentValue) {extremesObject.min = array[i];}
+    if (minValue > currentValue) {
+      extremesObject.min = array[i];
+    }
   }
 
   return extremesObject;

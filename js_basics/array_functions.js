@@ -4,17 +4,21 @@ function getDiapason(start, finish, step) {
     return "bad options";
   }
 
-  if (step == undefined) {step = 1;}
+  if (step == undefined) {
+    step = 1;
+  }
 
   var diapason = [];
 
   if (start == finish) {
     diapason.push(start);
-	return diapason;
-  } 
-  
-  if ((finish - start) * step < 0) {step = -step;}
-  
+    return diapason;
+  }
+
+  if ((finish - start) * step < 0) {
+    step = -step;
+  }
+
   if (start < finish) {
     while (start <= finish) {
       diapason.push(start);
@@ -26,7 +30,7 @@ function getDiapason(start, finish, step) {
       start += step;
     }
   }
-  
+
   return diapason;
 }
 
@@ -49,7 +53,7 @@ function reverseArrayInPlace(array) {
   var pastValue;
   var length = array.length;
 
-  while (var i < length / 2) {
+  while (i < length / 2) {
     pastValue = array[i];
     array[i] = array[length - i - 1];
     array[length - i - 1] = pastValue;
@@ -70,7 +74,9 @@ function mergeArrays(...arrays) {
 
   for (var i = 0; i < totalArray.length; i++) {
     var item = totalArray[i];
-    if (getPositionInArray(mergedArray, item) == -1) {mergedArray.push(item);}
+    if (getPositionInArray(mergedArray, item) == -1) {
+      mergedArray.push(item);
+    }
   }
 
   return mergedArray;
@@ -78,7 +84,9 @@ function mergeArrays(...arrays) {
 
 function getPositionInArray(array, value) {
   for (var i = 0; i < array.length; i++) {
-    if (array[i] === value) {return i;}
+    if (array[i] === value) {
+      return i;
+    }
   }
 
   return -1;
@@ -87,7 +95,9 @@ function getPositionInArray(array, value) {
 // 7.	Every и some
 function isEveryNaN(array) {
   for (var i = 0; i < array.length; i++) {
-    if (!isNaN(array[i])) {return false;}
+    if (!isNaN(array[i])) {
+      return false;
+    }
   }
 
   return true;
@@ -95,7 +105,9 @@ function isEveryNaN(array) {
 
 function isSomeNaN(array) {
   for (var i = 0; i < array.length; i++) {
-    if (isNaN(array[i])) {return true;}
+    if (isNaN(array[i])) {
+      return true;
+    }
   }
 
   return false;

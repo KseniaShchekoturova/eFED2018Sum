@@ -5,7 +5,9 @@ function countChar(text, char) {
   var length = text.length;
 
   while (i < length) {
-    if (text[i] == char) {entryNumber++;}
+    if (text[i] == char) {
+      entryNumber++;
+    }
     i++;
   }
 
@@ -19,7 +21,9 @@ function replaceAllSingleQuotesWithDouble(text) {
 
   while (true) {
     regExpResult = text.match(regExp);
-    if (!regExpResult) {break;}
+    if (!regExpResult) {
+      break;
+    }
     for (var i = 0; i < regExpResult.length; i++) {
       text = replaceSpecificSingleQuotesWithDouble(text, regExpResult[i]);
     }
@@ -29,8 +33,9 @@ function replaceAllSingleQuotesWithDouble(text) {
 }
 
 function replaceSpecificSingleQuotesWithDouble(text, subStringBefore) {
-  var subStringAfter = '"' + subStringBefore.substring(1, subStringBefore.length - 1) + '"';
+  var subStringAfter =
+    '"' + subStringBefore.substring(1, subStringBefore.length - 1) + '"';
   text = text.replace(subStringBefore, subStringAfter);
-  
+
   return text;
 }

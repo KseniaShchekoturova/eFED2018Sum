@@ -82,7 +82,7 @@ function getWeekDayName(date) {
 
 // 12.	Разница в годах
 function getDifferenceInYears(startDate, finishDate) {
-  var millisecondsInDay	= 24 * 3600 * 1000;
+  var millisecondsInDay = 24 * 3600 * 1000;
   var differenceInDays = (finishDate - startDate) / millisecondsInDay;
   var daysInYear = 365;
   var differenceInYears = Math.round((10 * differenceInDays) / daysInYear) / 10;
