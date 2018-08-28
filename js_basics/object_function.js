@@ -1,5 +1,5 @@
 // 2.	Глубокое сравнение
-function compareContent(value1, value2) {
+function areEquaInContent(value1, value2) {
   if (typeof value1 != typeof value2) {return false;}
 
   if (typeof value1 != "object") {return value1 === value2;}
@@ -11,7 +11,7 @@ function compareContent(value1, value2) {
 
   try {
     for (var key in value1) {
-      if (!compareContent(value1[key], value2[key])) {return false;}
+      if (!areEquaInContent(value1[key], value2[key])) {return false;}
     }
   } catch (err) {
     return false;

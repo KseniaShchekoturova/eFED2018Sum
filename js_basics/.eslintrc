@@ -1,28 +1,14 @@
 {
-    "env": {
-    "browser": true
-    },
-    "extends": "eslint:recommended",
-    "parserOptions": {
-    "ecmaVersion": 2017
-    },
+    "env": {"browser": true},
+    "extends": ["react-app","plugin:prettier/recommended"],
+	"plugins": ["prettier"],
+    "parserOptions": {"ecmaVersion": 2017},
     "rules": {
-    "indent": [
-    "error",
-    4
-    ],
-    "linebreak-style": [
-    "error",
-    "windows"
-    ],
-    "quotes": [
-    "error",
-    "single"
-    ],
-    "semi": [
-    "error",
-    "always"
-    ]
+		"indent": ["error",	4],
+		"linebreak-style": ["error","windows"],
+		"quotes": ["error","single"],
+		"semi": ["error","always"],
+		"prettier/prettier": "error"
     }
-    }
+}
     

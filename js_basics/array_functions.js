@@ -45,6 +45,7 @@ function reverseArray(array) {
 }
 
 function reverseArrayInPlace(array) {
+  var i = 0;
   var pastValue;
   var length = array.length;
 
