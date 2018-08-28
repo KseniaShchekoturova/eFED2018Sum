@@ -12,7 +12,7 @@ function findAnomaly(array, paramName) {
     maxValue = Number(extremesObject.max[paramName]);
     currentValue = Number(array[i][paramName]);
     if (maxValue < currentValue) {
-      extremesObject.max = array[i];
+      extremesObject.max = currentValue;
     }
   }
 
@@ -20,7 +20,7 @@ function findAnomaly(array, paramName) {
     minValue = Number(extremesObject.min[paramName]);
     currentValue = Number(array[i][paramName]);
     if (minValue > currentValue) {
-      extremesObject.min = array[i];
+      extremesObject.min = currentValue;
     }
   }
 
