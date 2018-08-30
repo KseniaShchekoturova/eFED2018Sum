@@ -11,7 +11,7 @@ this.window.onload = function() {
     }
 };
 
-function arr() {
+function arr() { 
     
 	var elements_values = document.getElementsByClassName('five-days-table-common__day');
     var elements_weekdays = document.getElementsByClassName('five-days-table__one-day');
