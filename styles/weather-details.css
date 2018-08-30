@@ -146,7 +146,7 @@ button, input{
   margin: 2px;
 }
 
-#button_5days{
+#button_5days, .active{
   background-color: DarkGrey;
 }
 

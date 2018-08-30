@@ -6,9 +6,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Сайт погоды</title>
   <link rel="stylesheet" href="styles/weather-details.css">
+
 </head>
 
 <body>
+
+  <script src="js/index.js"></script>
 
   <div class="content">
 
@@ -33,7 +36,7 @@
 
     <main>
 
-      <section class="five-days">
+      <section class="five-days" onclick="arr()">
         <img class="rotate-previous" src="styles/more-than.png" alt="Предыдущие 5 дней">
         <div class="five-days__table  five-days-table">
           <div class="five-days-table__header">
@@ -100,7 +103,7 @@
                   <div class="five-days-table-common-day__one-quarter">
                     <div>Ночь</div>
                     <img src="styles/assets_5 days_2018-06-14/Cloudy Weather.png" alt="Ночь">
-                    <div class="quarter-degree  quarter-degree--8">+8</div>
+                    <div class="quarter-degree  quarter-degree--8">+9</div>
                   </div>
                   <div class="five-days-table-common-day__one-quarter">
                     <div>Утро</div>
@@ -124,7 +127,7 @@
                   <div class="five-days-table-common-day__one-quarter">
                     <div>Ночь</div>
                     <img src="styles/assets_5 days_2018-06-14/Cloudy Weather.png" alt="Ночь">
-                    <div class="quarter-degree  quarter-degree--8">+8</div>
+                    <div class="quarter-degree  quarter-degree--8">+10</div>
                   </div>
                   <div class="five-days-table-common-day__one-quarter">
                     <div>Утро</div>
@@ -148,7 +151,7 @@
                   <div class="five-days-table-common-day__one-quarter">
                     <div>Ночь</div>
                     <img src="styles/assets_5 days_2018-06-14/Cloudy Weather.png" alt="Ночь">
-                    <div class="quarter-degree  quarter-degree--8">+8</div>
+                    <div class="quarter-degree  quarter-degree--8">+11</div>
                   </div>
                   <div class="five-days-table-common-day__one-quarter">
                     <div>Утро</div>
@@ -172,7 +175,7 @@
                   <div class="five-days-table-common-day__one-quarter">
                     <div>Ночь</div>
                     <img src="styles/assets_5 days_2018-06-14/Cloudy Weather.png" alt="Ночь">
-                    <div class="quarter-degree  quarter-degree--8">+8</div>
+                    <div class="quarter-degree  quarter-degree--8">+12</div>
                   </div>
                   <div class="five-days-table-common-day__one-quarter">
                     <div>Утро</div>
@@ -287,6 +290,15 @@
 
 
         <img class="rotate-following" src="styles/more-than.png" alt="Предыдущие 5 дней">
+      
+        <nav class="header__navigation  header-navigation  buttons_weekday">
+          <button class="button_weekday  active">пт</button>
+          <button class="button_weekday">сб</button>
+          <button class="button_weekday">вс</button>
+          <button class="button_weekday">пн</button>
+          <button class="button_weekday">вт</button>
+        </nav>
+
       </section>
 
       <section class="day-night-and-gaps">
