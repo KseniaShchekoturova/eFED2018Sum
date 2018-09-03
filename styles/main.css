@@ -168,6 +168,11 @@ footer{
   border-width: 1px 0 0;
 }
 
+/* ---------------------- остальное ------------------------------ */
+.active{
+  background-color: DarkGrey;
+}
+
 /* ---------------------- адаптивный дизайн ---------------------- */
 
 @media (min-width: 600px) {
@@ -470,9 +475,9 @@ button, input{
   height: 3em;
 }
 
-#button-temperature{
+/*#button-temperature{
   background-color: DarkGrey;
-}
+}*/
 
 .main-hours-weather__temperature-values div{
   text-align: center;

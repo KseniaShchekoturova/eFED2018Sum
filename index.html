@@ -53,17 +53,19 @@
             <br> Ветер: 11 км/ч
             <br>
           </div>
-          <nav>
-            <button id="button-temperature">Температура</button>
-            <button id="button-precipitation">Вероятность осадков</button>
-            <button id="button-wind">Ветер</button>
+          <nav id="weather-characteristics-buttons">
+            <button id="button-temperature" class="weather-characteristics-one-button  active">Температура</button>
+            <button id="button-precipitation" class="weather-characteristics-one-button">Вероятность осадков</button>
+            <button id="button-wind" class="weather-characteristics-one-button">Ветер</button>
           </nav>
         </div>
       </section>
 
       <section class="main__hours-weather  main-hours-weather">
 
-        <div class="main-hours-weather__temperature-values  flex-container" id="temperature-values">
+		<div class="main-hours-weather__temperature-values-and-hours  weather-characteristics__one-characteristic" id="temperature-values-and-hours">
+        
+		<div class="main-hours-weather__temperature-values  flex-container" id="temperature-values">
 
           <div>
             12
@@ -117,7 +119,9 @@
           <div class="flex-item">14:00</div>
         </div>
 
-        <div class="main-hours-weather__precipitation  flex-container" id="precipitation" style="display: none;">
+		</div>
+		
+        <div class="main-hours-weather__precipitation  flex-container  weather-characteristics__one-characteristic" id="precipitation" style="display: none;">
 
           <!-- <div class="flex-item-" style="width: 12.5%;"> -->
           <div class="flex-item">
@@ -218,7 +222,7 @@
 
         </div>
 
-        <div class="main-hours-weather__wind  flex-container-changing-big" id="wind" style="display: none;">
+        <div class="main-hours-weather__wind  flex-container-changing-big  weather-characteristics__one-characteristic" id="wind" style="display: none;">
 
           <div class="flex-item  flex-container-changing-small  flex-item-black-line">
             <div>5 м/с</div>
@@ -332,47 +336,8 @@
     2018 &copy Copyright
   </footer>
 
-
-  <script>
-    document.getElementById('button-temperature').onclick = function () {
-
-      document.getElementById('button-temperature').style.backgroundColor = 'DarkGrey';
-      document.getElementById('temperature-values').style.display = 'flex';
-      document.getElementById('hours').style.display = 'flex';
-
-      document.getElementById('button-precipitation').style.backgroundColor = 'buttonface';
-      document.getElementById('precipitation').style.display = 'none';
-
-      document.getElementById('button-wind').style.backgroundColor = 'buttonface';
-      document.getElementById('wind').style.display = 'none';
-    }
-
-    document.getElementById('button-precipitation').onclick = function () {
-
-      document.getElementById('button-temperature').style.backgroundColor = 'buttonface';
-      document.getElementById('temperature-values').style.display = 'none';
-      document.getElementById('hours').style.display = 'none';
-
-      document.getElementById('button-precipitation').style.backgroundColor = 'DarkGrey';
-      document.getElementById('precipitation').style.display = 'flex';
-
-      document.getElementById('button-wind').style.backgroundColor = 'buttonface';
-      document.getElementById('wind').style.display = 'none';
-    }
-
-    document.getElementById('button-wind').onclick = function () {
-
-      document.getElementById('button-temperature').style.backgroundColor = 'buttonface';
-      document.getElementById('temperature-values').style.display = 'none';
-      document.getElementById('hours').style.display = 'none';
-
-      document.getElementById('button-precipitation').style.backgroundColor = 'buttonface';
-      document.getElementById('precipitation').style.display = 'none';
-
-      document.getElementById('button-wind').style.backgroundColor = 'DarkGrey';
-      document.getElementById('wind').style.display = 'flex';
-    }
-  </script>
+  <script src="js/common.js"></script>
+  <script src="js/index.js"></script>
 </body>
 
 </html>
