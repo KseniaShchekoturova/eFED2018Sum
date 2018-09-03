@@ -11,21 +11,6 @@ function getIndexOfButton(button, buttonsMass) {
 	return -1;
 }
 
-function showOnlyActiveBlock_old(indexOfActive) {
-	var i = 0;
-	
-	while (i < elements_values.length) {
-        if (indexOfActive == i) {
-            elements_values[i].style.display = '';
-            elements_weekdays[i].style.display = '';
-        } else {
-            elements_values[i].style.display = 'none';
-            elements_weekdays[i].style.display = 'none';
-        }
-        i++;
-    }
-}
-
 function showOnlyActiveBlock(indexOfActive) {
 	var i;
 	var j;
