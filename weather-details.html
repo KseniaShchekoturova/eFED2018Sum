@@ -11,8 +11,6 @@
 
 <body>
 
-  <script src="js/index.js"></script>
-
   <div class="content">
 
     <header>
@@ -36,8 +34,8 @@
 
     <main>
 
-      <section class="five-days" onclick="arr()">
-        <img class="rotate-previous" src="styles/more-than.png" alt="Предыдущие 5 дней">
+      <section class="five-days">
+        <img id = "rotate-previous" class="rotate-previous" src="styles/more-than.png" alt="Предыдущие 5 дней">
         <div class="five-days__table  five-days-table">
           <div class="five-days-table__header">
             <div style="width: 20%">
@@ -289,14 +287,14 @@
         </div>
 
 
-        <img class="rotate-following" src="styles/more-than.png" alt="Предыдущие 5 дней">
+        <img id="rotate-following" class="rotate-following" src="styles/more-than.png" alt="Предыдущие 5 дней">
       
-        <nav class="header__navigation  header-navigation  buttons_weekday">
-          <button class="button_weekday  active">пт</button>
-          <button class="button_weekday">сб</button>
-          <button class="button_weekday">вс</button>
-          <button class="button_weekday">пн</button>
-          <button class="button_weekday">вт</button>
+        <nav id="weekday-buttons" class="weekday-buttons">
+          <button class="weekday-one-button  active">пт</button>
+          <button class="weekday-one-button">сб</button>
+          <button class="weekday-one-button">вс</button>
+          <button class="weekday-one-button">пн</button>
+          <button class="weekday-one-button">вт</button>
         </nav>
 
       </section>
@@ -347,6 +345,8 @@
   <footer>
     2018 &copy Copyright
   </footer>
+  
+  <script src="js/index.js"></script>
 
 </body>
 

@@ -375,6 +375,10 @@ img[alt] {
   padding: 10px 0;
 }
 
+.weekday-buttons{
+  display: block;
+}
+
 /* ---------------------- адаптивный дизайн ---------------------- */
 
 @media (min-width: 1000px) {
@@ -557,6 +561,10 @@ img[alt] {
   .day-night-content__pic > img{
     width: 100px;
     height: 100px;
+  }
+  
+  .weekday-buttons{
+	display: none;
   }
   
 }
