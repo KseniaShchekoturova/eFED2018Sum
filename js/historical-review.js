@@ -22,16 +22,16 @@ function transform(data) {
 }
 
 function render(data) {
-    var elements1 = document.getElementsByClassName('year-table__cell_first-line'); 
-    var elements2 = document.getElementsByClassName('year-table__cell_second-line');  
-    var elements3 = document.getElementsByClassName('year-table__cell_third-line'); 
-    var elements4 = document.getElementsByClassName('year-table__cell_forth-line');    
+    var elementsAverageMax = document.getElementsByClassName('year-table__cell_average-max'); 
+    var elementsAverageMin = document.getElementsByClassName('year-table__cell_average-min');  
+    var elementsRecordMax = document.getElementsByClassName('year-table__cell_record-max'); 
+    var elementsRecordMin = document.getElementsByClassName('year-table__cell_record-min');    
     var i = 0;
-    while (i < elements1.length) {
-        elements1[i].innerText = data[i].max - 1;
-        elements2[i].innerText = data[i].min + 1;
-        elements3[i].innerText = data[i].max;
-        elements4[i].innerText = data[i].min;
+    while (i < elementsAverageMax.length) {
+        elementsAverageMax[i].innerText = data[i].max - 1;
+        elementsAverageMin[i].innerText = data[i].min + 1;
+        elementsRecordMax[i].innerText = data[i].max;
+        elementsRecordMin[i].innerText = data[i].min;
         i++;
     }  
 }
