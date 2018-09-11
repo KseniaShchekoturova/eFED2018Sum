@@ -1,5 +1,3 @@
-var date = new Date(2016, 0);
-
 var inputSearch = document.getElementById('search');
 inputSearch.addEventListener("keydown", changeCity);
 
@@ -9,11 +7,10 @@ function changeCity(event) {
     load(date, city);
 }; 
 
-load("Izhevsk", date);
+load("Izhevsk");
 
-function load(city, date) {
-    var year = date.getFullYear();
-    var data = historicalReviewMock[city][year];
+function load(city) {
+    var data = historicalReviewMock[city];
     transform(data);
 }
 
@@ -28,10 +25,10 @@ function render(data) {
     var elementsRecordMin = document.getElementsByClassName('year-table__cell_record-min');    
     var i = 0;
     while (i < elementsAverageMax.length) {
-        elementsAverageMax[i].innerText = data[i].max - 1;
-        elementsAverageMin[i].innerText = data[i].min + 1;
-        elementsRecordMax[i].innerText = data[i].max;
-        elementsRecordMin[i].innerText = data[i].min;
+        elementsAverageMax[i].innerText = data[i].averageMax;
+        elementsAverageMin[i].innerText = data[i].averageMin;
+        elementsRecordMax[i].innerText = data[i].recordMax;
+        elementsRecordMin[i].innerText = data[i].recordMin;
         i++;
     }  
 }
